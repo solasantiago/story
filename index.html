@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="La historia del linaje Chasampi de Mutquín, Catamarca: de la cultura La Aguada al cacique Juan Mateo Chasampi y María Primitiva.">
+<style>*,*::before,*::after{box-sizing:border-box}:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Raíces Chasampi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,700;1,500&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Alegreya+Sans+SC:wght@500;700&display=swap">
+<style>
+/* Layout: una sola columna de lectura con una línea de tiempo vertical a la izquierda, pensada para el celular.
+   Paleta tomada de la cerámica de La Aguada: gris grabado, arcilla, ocre y rojo. Tipografía Alegreya (Huerta Tipográfica, Argentina). */
+:root {
+  --bg: #e8e3dc;
+  --surface: #f3efe9;
+  --fg: #2a2522;
+  --muted: #6b605a;
+  --line: #c9bfb3;
+  --accent: #8e3b22;
+  --ochre: #8a5f16;
+  --ochre-soft: #e4d3b2;
+  --display: "Alegreya", Georgia, "Times New Roman", serif;
+  --body: "Alegreya Sans", "Segoe UI", system-ui, sans-serif;
+  --label: "Alegreya Sans SC", "Alegreya Sans", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1c1a19; --surface: #262321; --fg: #ece5dc; --muted: #a89c91;
+    --line: #3e3833; --accent: #d9805f; --ochre: #d6a94f; --ochre-soft: #3a3020;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1c1a19; --surface: #262321; --fg: #ece5dc; --muted: #a89c91;
+  --line: #3e3833; --accent: #d9805f; --ochre: #d6a94f; --ochre-soft: #3a3020;
+  color-scheme: dark;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+.page {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding-inline: 1.25rem;
+  padding-block: 2.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; line-height: 1.15; margin: 0; }
+p { margin: 0; }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--ochre); outline-offset: 2px; border-radius: 2px; }
+
+.label {
+  font-family: var(--label);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  color: var(--ochre);
+}
+
+/* Greca escalonada, motivo de la cerámica del noroeste */
+.greca {
+  height: 12px;
+  background: var(--accent);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='12'%3E%3Cpath d='M0 12V8h4V4h4V0h8v4h4v4h4v4z'/%3E%3C/svg%3E") repeat-x left center / 24px 12px;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='12'%3E%3Cpath d='M0 12V8h4V4h4V0h8v4h4v4h4v4z'/%3E%3C/svg%3E") repeat-x left center / 24px 12px;
+  opacity: 0.85;
+}
+
+/* Portada */
+.hero { display: flex; flex-direction: column; gap: 1rem; }
+.hero h1 { font-size: clamp(2.6rem, 11vw, 4rem); font-weight: 700; letter-spacing: -0.01em; }
+.hero h1 em { font-style: italic; font-weight: 500; color: var(--accent); }
+.lede { font-size: 1.15rem; color: var(--fg); max-width: 34rem; }
+.dedica {
+  font-family: var(--display);
+  font-style: italic;
+  color: var(--muted);
+  border-left: 2px solid var(--ochre);
+  padding-left: 0.9rem;
+}
+
+/* Dónde y quiénes */
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+.pair div { background: var(--surface); border-radius: 6px; padding: 1rem; display: flex; flex-direction: column; gap: 0.35rem; min-width: 0; }
+.pair strong { font-family: var(--display); font-size: 1.35rem; }
+.pair p { color: var(--muted); font-size: 0.97rem; }
+@media (max-width: 420px) { .pair { grid-template-columns: 1fr; } }
+
+/* Línea de tiempo */
+.section-head { display: flex; flex-direction: column; gap: 0.5rem; }
+.section-head h2 { font-size: 1.9rem; }
+.timeline { list-style: none; margin: 0; padding: 0; position: relative; display: flex; flex-direction: column; gap: 2.5rem; }
+.timeline::before {
+  content: ""; position: absolute; left: 7px; top: 0.6rem; bottom: 0.6rem;
+  width: 2px; background: var(--line);
+}
+.era { position: relative; padding-left: 2.25rem; display: flex; flex-direction: column; gap: 0.75rem; min-width: 0; }
+.era::before {
+  content: ""; position: absolute; left: 0; top: 0.3rem;
+  width: 16px; height: 16px; background: var(--bg);
+  border: 2px solid var(--ochre); transform: rotate(45deg) scale(0.8);
+}
+.era.key::before { background: var(--accent); border-color: var(--accent); }
+.era h3 { font-size: 1.5rem; font-weight: 700; }
+.era ul { margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 0.4rem; }
+
+.note {
+  background: var(--surface);
+  border-radius: 6px;
+  padding: 1rem 1.1rem;
+  display: flex; flex-direction: column; gap: 0.5rem;
+  font-size: 0.98rem;
+}
+.note h4 { margin: 0; font-family: var(--label); font-weight: 700; font-size: 0.9rem; letter-spacing: 0.06em; color: var(--accent); }
+
+.quote {
+  font-family: var(--display);
+  font-size: 1.25rem;
+  font-style: italic;
+  line-height: 1.4;
+  color: var(--accent);
+}
+
+/* Linaje */
+.lineage { display: flex; flex-direction: column; gap: 0; }
+.gen { display: grid; grid-template-columns: 5.5rem 1fr; gap: 1rem; padding-block: 0.9rem; border-top: 1px solid var(--line); align-items: baseline; }
+.gen:last-child { border-bottom: 1px solid var(--line); }
+.gen .yr { font-family: var(--label); font-weight: 700; color: var(--ochre); font-variant-numeric: tabular-nums; letter-spacing: 0.04em; }
+.gen .who { display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; }
+.gen .who strong { font-family: var(--display); font-size: 1.2rem; font-weight: 700; }
+.gen .who span { color: var(--muted); font-size: 0.95rem; }
+.gen.gap .who strong { font-style: italic; font-weight: 500; color: var(--muted); }
+
+/* Fuentes */
+.sources ol { margin: 0; padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.55rem; font-size: 0.95rem; color: var(--muted); }
+.sources ol span { color: var(--fg); }
+footer { color: var(--muted); font-size: 0.9rem; display: flex; flex-direction: column; gap: 1rem; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .era { animation: rise 0.6s ease-out both; }
+  @keyframes rise { from { transform: translateY(6px); } to { transform: none; } }
+}
+</style>
+</head>
+<body>
+
+<main class="page">
+
+  <header class="hero">
+    <span class="label">Mutquín · Pomán · Catamarca</span>
+    <h1>Raíces <em>Chasampi</em></h1>
+    <p class="lede">La historia del pueblo y del linaje de María Primitiva Chasampi, nacida en Mutquín el 7 de febrero de 1937. Más de mil años en el oeste de Catamarca, desde la cultura La Aguada hasta hoy.</p>
+    <p class="dedica">Escrito el 10 de octubre de 2026, en el aniversario de su partida. En su memoria.</p>
+  </header>
+
+  <div class="greca" aria-hidden="true"></div>
+
+  <section class="pair" aria-label="Dos palabras para empezar">
+    <div>
+      <span class="label">El dónde</span>
+      <strong>Mutquín</strong>
+      <p>El pueblo del departamento Pomán, en Catamarca, donde nació María Primitiva. Su nombre viene del quichua <em>mutquy</em>, que significa "olor".</p>
+    </div>
+    <div>
+      <span class="label">El quiénes</span>
+      <strong>Chasampi</strong>
+      <p>El apellido y el linaje. Tiene raíz en el cacán, la lengua diaguita, y sus portadores se reconocen descendientes de un cacique.</p>
+    </div>
+  </section>
+
+  <section class="section-head">
+    <span class="label">Línea de tiempo</span>
+    <h2>De La Aguada a Mutquín</h2>
+  </section>
+
+  <ol class="timeline">
+
+    <li class="era">
+      <span class="label">c. 600 – 900 d.C.</span>
+      <h3>La cultura La Aguada</h3>
+      <p>Es la raíz más antigua que se puede rastrear con cierta certeza en esta tierra. No fue un pueblo único ni un territorio político, sino una cultura compartida por comunidades de los valles de Catamarca, La Rioja y San Juan.</p>
+      <p>El nombre se lo pusieron los arqueólogos, por una pequeña localidad catamarqueña llamada La Aguada, donde se halló un cementerio de unas 200 tumbas con su cerámica característica.</p>
+      <ul>
+        <li>Hicieron una de las cerámicas más refinadas de la región: grabada y pintada en gris, negro y rojo.</li>
+        <li>Su símbolo central era el <strong>felino</strong>, el jaguar, asociado al poder y a lo sagrado, muchas veces junto a figuras de guerreros.</li>
+        <li>Trabajaron el cobre en placas con grabados rituales. Por sus figuras casi de dragón, a esta cultura también se la llama "Draconiana".</li>
+      </ul>
+      <p>Antes hubo cazadores y recolectores durante miles de años, pero sin un rastro continuo que se pueda seguir hasta hoy.</p>
+    </li>
+
+    <li class="era">
+      <span class="label">c. 850 – 1480 d.C.</span>
+      <h3>La cultura santamariana</h3>
+      <p>Hacia el año 900 La Aguada se diluye, pero parte de su legado continúa en culturas más tardías. La principal es la santamariana, llamada así por el valle de Santa María, entre Catamarca y Salta.</p>
+      <ul>
+        <li>Su sello más conocido son las <strong>urnas funerarias</strong> donde enterraban a los niños, hoy presentes en grandes museos del mundo.</li>
+        <li>Es el período de los Desarrollos Regionales: pueblos fortificados en altura, obras de riego y comunidades que empiezan a confederarse para defenderse.</li>
+      </ul>
+      <div class="note">
+        <h4>Santa María y diaguita, ¿qué relación hay?</h4>
+        <p>Son la misma gente vista de dos maneras. "Santa María" es el nombre arqueológico: el estilo de los objetos, las urnas, las ruinas. "Diaguita" es el nombre del pueblo vivo que dejó esos restos.</p>
+        <p>Pensalo así: si dentro de dos mil años unos arqueólogos encontraran mates y camisetas de fútbol y llamaran a eso "cultura rioplatense", esa gente igual se habría llamado a sí misma argentina y habría hablado español. La gente de la cultura santamariana <strong>era</strong> el pueblo diaguita.</p>
+      </div>
+    </li>
+
+    <li class="era">
+      <span class="label">Nación diaguita</span>
+      <h3>Los diaguitas, el cacán y los calchaquíes</h3>
+      <p>Los diaguitas eran un conjunto de pueblos independientes del noroeste argentino y el norte de Chile, unidos por una lengua común: el <strong>cacán</strong>. Fueron agricultores, ceramistas y guerreros.</p>
+      <p>"Diaguita" es una palabra quechua que significa "serrano". Se la pusieron los incas y después la difundieron los españoles.</p>
+      <p>Los <strong>calchaquíes</strong> eran una de las parcialidades, uno de los grupos, de la nación diaguita. La comunidad de Mutquín pertenecía a esa rama.</p>
+    </li>
+
+    <li class="era">
+      <span class="label">Siglo XV</span>
+      <h3>Llegan los incas</h3>
+      <p>El Imperio Inca se extendió sobre la región en el siglo XV. Los diaguitas resistieron, pero terminaron incorporados. Durante unos doscientos años se habló quichua en la zona, y de esa lengua viene el nombre de Mutquín.</p>
+    </li>
+
+    <li class="era">
+      <span class="label">Siglos XVI – XVII</span>
+      <h3>La conquista española y la encomienda</h3>
+      <p>Frente a los españoles, los diaguitas opusieron una resistencia feroz: las <strong>Guerras Calchaquíes</strong> duraron más de un siglo. Al terminar, los españoles impusieron la encomienda y el destierro.</p>
+      <div class="note">
+        <h4>Cómo funcionaba la encomienda</h4>
+        <p>La Corona le daba a un español, el <strong>encomendero</strong>, un grupo de indígenas encabezados por su cacique. Quedaban obligados a pagarle un tributo en trabajo o en productos: maíz, trigo, tejidos, animales.</p>
+        <p>En teoría, el encomendero debía protegerlos y cristianizarlos. En la práctica fue un sistema de explotación, con trabajo forzado por temporadas (la mita) o de por vida (el yanaconazgo), y traslados de familias enteras por la fuerza.</p>
+        <p>El cacique quedaba en el medio: los españoles lo hacían responsable de entregar a su propia gente y de que se pagara el tributo.</p>
+      </div>
+    </li>
+
+    <li class="era key">
+      <span class="label">Siglos XVII – XVIII</span>
+      <h3>El cacique Juan Mateo Chasampi</h3>
+      <p>Un cacique era el jefe de su comunidad: repartía la tierra y el agua de riego, que en esa zona árida era vital, resolvía conflictos y guardaba las costumbres del pueblo. Bajo la encomienda podía ser un instrumento de los españoles o usar su lugar para proteger a los suyos.</p>
+      <p class="quote">Juan Mateo Chasampi eligió proteger a los suyos.</p>
+      <p>El encomendero Cuba Palacio se había llevado tierras y familias de la comunidad a Colpes. Juan Mateo Chasampi fue responsable, junto con otros, de recuperarlas. Convirtió un cargo pensado para someter en una herramienta de resistencia, y por eso el pueblo de Mutquín le rinde homenaje.</p>
+      <div class="note">
+        <h4>Hasta dónde llega la memoria escrita</h4>
+        <p>De él hacia atrás no hay registros accesibles. Los pueblos originarios no escribían, y un cacique aparece en los papeles coloniales solo cuando los españoles tuvieron motivo para nombrarlo. Juan Mateo Chasampi es el antepasado más antiguo de esta rama que se conoce con nombre y apellido. Antes de él hay pueblo y cultura, pero ya no personas con nombre.</p>
+      </div>
+    </li>
+
+    <li class="era">
+      <span class="label">7 de febrero de 1937</span>
+      <h3>Nace María Primitiva Chasampi</h3>
+      <p>En Mutquín, descendiente del cacique Chasampi. Con ella, esta historia de más de mil años llega a la familia Sola.</p>
+    </li>
+
+    <li class="era">
+      <span class="label">Hoy</span>
+      <h3>Una identidad que sigue viva</h3>
+      <p>Los descendientes de Mutquín rechazan que a su comunidad se la llame "pueblo de indios" y reivindican más de 1.400 años de antigüedad, según la cerámica de La Aguada hallada en la zona.</p>
+      <p>En los carnavales de Mutquín todavía salen las comparsas <strong>Diaguita</strong> y <strong>Calchaquí</strong>, con sus coplas, sus trajes y sus hombres-pájaro.</p>
+    </li>
+
+  </ol>
+
+  <div class="greca" aria-hidden="true"></div>
+
+  <section class="lineage" aria-labelledby="linaje">
+    <div class="section-head" style="margin-bottom:1.25rem">
+      <span class="label">La familia</span>
+      <h2 id="linaje">Del cacique a hoy</h2>
+    </div>
+    <div class="gen">
+      <span class="yr">s. XVII–XVIII</span>
+      <div class="who"><strong>Juan Mateo Chasampi</strong><span>Cacique de Mutquín</span></div>
+    </div>
+    <div class="gen gap">
+      <span class="yr">· · ·</span>
+      <div class="who"><strong>Generaciones por descubrir</strong><span>El camino que une al cacique con María Primitiva</span></div>
+    </div>
+    <div class="gen">
+      <span class="yr">1937</span>
+      <div class="who"><strong>María Primitiva Chasampi</strong><span>Nacida en Mutquín. Junto a José Sola, de familia de origen italiano.</span></div>
+    </div>
+    <div class="gen">
+      <span class="yr">1975</span>
+      <div class="who"><strong>Cristian Martín Sola</strong><span>Su hijo</span></div>
+    </div>
+    <div class="gen">
+      <span class="yr">1996 · 2004</span>
+      <div class="who"><strong>Santiago Martín y Chiara Sofía Sola</strong><span>Sus nietos</span></div>
+    </div>
+  </section>
+
+  <section class="sources" aria-labelledby="fuentes">
+    <div class="section-head" style="margin-bottom:1rem">
+      <span class="label">Fuentes</span>
+      <h2 id="fuentes" style="font-size:1.5rem">De dónde sale cada dato</h2>
+    </div>
+    <ol>
+      <li><span>Gabriela de la Orden de Peracca, <em>Pueblos indios de Pomán. Catamarca (siglos XVII a XIX)</em>.</span> Buenos Aires, Dunken, 2006. Colpes, Mutquín y el cacique Chasampi.</li>
+      <li><span><a href="https://es.wikipedia.org/wiki/Cultura_de_la_Aguada" target="_blank" rel="noopener">Cultura de la Aguada</a>, Wikipedia.</span> Fechas, ubicación y origen del nombre.</li>
+      <li><span>"Aguada", Proyecto AbRiGo, UNTREF.</span> Unidad cultural y expresiones regionales.</li>
+      <li><span>"Réplicas de cerámica de la cultura de La Aguada", Arte cerámico precolombino.</span> Cerámica, el felino y la metalurgia.</li>
+      <li><span><a href="https://es.wikipedia.org/wiki/Cultura_santamariana" target="_blank" rel="noopener">Cultura santamariana</a>, Wikipedia.</span> Cronología y urnas funerarias.</li>
+      <li><span>"Cronología de las culturas agroalfareras del noroeste argentino".</span> Continuidad entre La Aguada, Belén y Santa María.</li>
+      <li><span><a href="https://es.wikipedia.org/wiki/Pueblo_diaguita" target="_blank" rel="noopener">Pueblo diaguita</a>, Wikipedia.</span> La lengua cacán y el origen del nombre.</li>
+      <li><span>"Diaguita", Pueblos Originarios.</span> Las Guerras Calchaquíes.</li>
+      <li><span>"Las encomiendas en la Gobernación del Tucumán", Historia de Salta.</span> La encomienda y el tributo.</li>
+      <li><span>"Encomiendas y mitas", Historia Argentina, Gobernación de Tucumán.</span> Mita y yanaconazgo.</li>
+      <li><span>"No podemos permitir que nos sigan tratando con el apelativo que nos puso Colón", diario El Esquiú.</span> El homenaje a Juan Mateo Chasampi y la recuperación de Colpes.</li>
+      <li><span>"Pomán: descendiente de aborigen en contra de libro", blog Rincón, departamento Pomán.</span> La posición de la comunidad diaguita de Pomán.</li>
+      <li><span>"Comparsas de Mutquín. Coplas, color y ritual", diario El Esquiú.</span> Las comparsas Diaguita y Calchaquí.</li>
+    </ol>
+  </section>
+
+  <footer>
+    <div class="greca" aria-hidden="true"></div>
+    <p>Investigación familiar de Santiago Martín Sola. Esta es la rama Chasampi; la rama Sola, de origen italiano, es la próxima historia por contar.</p>
+  </footer>
+
+</main>
+</body>
+</html>
