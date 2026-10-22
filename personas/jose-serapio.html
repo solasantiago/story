@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="José Serapio Chasampi (1910–1974), padre de María Primitiva Chasampi: datos y actas transcriptas.">
+<title>José Serapio Chasampi</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta name="theme-color" content="#1c1a19">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,700;1,500&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Alegreya+Sans+SC:wght@500;700&display=swap">
+<style>
+/* Ficha de persona: misma paleta y tipografía que Raíces Chasampi. Una columna; cada acta es una tarjeta con imagen y transcripción. */
+*,*::before,*::after{box-sizing:border-box}
+:root {
+  --bg: #e8e3dc; --surface: #f3efe9; --fg: #2a2522; --muted: #6b605a;
+  --line: #c9bfb3; --accent: #8e3b22; --ochre: #8a5f16;
+  --display: "Alegreya", Georgia, "Times New Roman", serif;
+  --body: "Alegreya Sans", "Segoe UI", system-ui, sans-serif;
+  --label: "Alegreya Sans SC", "Alegreya Sans", system-ui, sans-serif;
+  color-scheme: light;
+  padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1c1a19; --surface: #262321; --fg: #ece5dc; --muted: #a89c91;
+    --line: #3e3833; --accent: #d9805f; --ochre: #d6a94f; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1c1a19; --surface: #262321; --fg: #ece5dc; --muted: #a89c91;
+  --line: #3e3833; --accent: #d9805f; --ochre: #d6a94f; color-scheme: dark;
+}
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 1.0625rem; line-height: 1.6; }
+img { max-width: 100%; }
+.page { max-width: 44rem; margin: 0 auto; padding-inline: 1.25rem; padding-block: 1.5rem 4rem; display: flex; flex-direction: column; gap: 2.5rem; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; line-height: 1.15; margin: 0; }
+p { margin: 0; }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--ochre); outline-offset: 2px; border-radius: 2px; }
+.label { font-family: var(--label); font-weight: 700; font-size: 0.85rem; letter-spacing: 0.08em; color: var(--ochre); }
+.back { font-family: var(--label); font-weight: 700; letter-spacing: 0.06em; font-size: 0.9rem; text-decoration: none; }
+
+.hero { display: flex; flex-direction: column; gap: 0.6rem; }
+.vinculo { align-self: flex-start; background: var(--accent); color: var(--bg); font-family: var(--label); font-weight: 700; letter-spacing: 0.06em; font-size: 0.9rem; padding: 0.25rem 0.7rem; border-radius: 4px; }
+.hero h1 { font-size: clamp(2.2rem, 9vw, 3.2rem); font-weight: 700; }
+.hero .years { font-family: var(--display); font-style: italic; color: var(--muted); font-size: 1.2rem; }
+
+.ficha { display: grid; grid-template-columns: 8.5rem 1fr; border-top: 1px solid var(--line); }
+.ficha dt, .ficha dd { margin: 0; padding-block: 0.65rem; border-bottom: 1px solid var(--line); }
+.ficha dt { font-family: var(--label); font-weight: 700; letter-spacing: 0.05em; font-size: 0.85rem; color: var(--ochre); padding-top: 0.8rem; }
+.ficha dd { min-width: 0; }
+.ficha dd small { display: block; color: var(--muted); font-size: 0.9rem; }
+@media (max-width: 420px) { .ficha { grid-template-columns: 1fr; } .ficha dt { border-bottom: 0; padding-bottom: 0; } }
+
+.note { background: var(--surface); border-radius: 6px; padding: 1rem 1.1rem; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.98rem; }
+.note h3 { font-family: var(--label); font-weight: 700; font-size: 0.9rem; letter-spacing: 0.06em; color: var(--accent); }
+.note ul { margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 0.35rem; }
+
+.section-head { display: flex; flex-direction: column; gap: 0.4rem; }
+.section-head h2 { font-size: 1.8rem; }
+.docs { display: flex; flex-direction: column; gap: 2.5rem; }
+.doc { display: flex; flex-direction: column; gap: 0.9rem; border-top: 2px solid var(--accent); padding-top: 1rem; }
+.doc h3 { font-size: 1.4rem; }
+.doc .ref { color: var(--muted); font-size: 0.92rem; }
+.imgs { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 0.75rem; }
+.imgs a { display: block; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; background: var(--surface); }
+.imgs img { display: block; width: 100%; height: auto; }
+.imgs figure { margin: 0; display: flex; flex-direction: column; gap: 0.3rem; min-width: 0; }
+.imgs figcaption { font-size: 0.85rem; color: var(--muted); }
+.trans { font-family: var(--display); font-size: 1.05rem; line-height: 1.65; background: var(--surface); border-radius: 6px; padding: 1rem 1.1rem; display: flex; flex-direction: column; gap: 0.7rem; }
+.trans .marg { font-family: var(--body); font-size: 0.92rem; color: var(--muted); }
+.aporta { font-size: 0.98rem; }
+.aporta strong { font-family: var(--label); letter-spacing: 0.05em; color: var(--ochre); }
+footer { color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--line); padding-top: 1rem; }
+</style>
+</head>
+<body>
+<main class="page">
+
+  <a class="back" href="../">← Raíces Chasampi</a>
+
+  <header class="hero">
+    <span class="vinculo">Padre de María Primitiva</span>
+    <h1>José Serapio Chasampi</h1>
+    <p class="years">Mutquín, 1910 – Mutquín, 1974</p>
+  </header>
+
+  <dl class="ficha" aria-label="Datos principales">
+    <dt>Nacimiento</dt>
+    <dd>13 de noviembre de 1910, a las 2 de la tarde, en Mutquín (Pomán, Catamarca)<small>Acta de nacimiento civil N.º 85</small></dd>
+    <dt>Bautismo</dt>
+    <dd>22 de agosto de 1911, Capilla del Señor de la Salud de Mutquín, parroquia de Saujil<small>Partida 719. Madrina: Brígida Arévalo</small></dd>
+    <dt>Padres</dt>
+    <dd>Eleuterio Chasampi, labrador, y Dalinda Calsapi, costurera</dd>
+    <dt>Abuelos</dt>
+    <dd>Pedro P. Chasampi y Antonia Aguilar, por parte de padre. Juan P. Calsapi y Segunda Carrizo, por parte de madre.<small>Los nombra su acta de nacimiento</small></dd>
+    <dt>Oficio</dt>
+    <dd>Labrador, más tarde agricultor</dd>
+    <dt>Casamiento</dt>
+    <dd>1 de febrero de 1937 en Saujil, por civil y por iglesia, con Adelina Altamiranda</dd>
+    <dt>Hija</dt>
+    <dd>María Primitiva, nacida el 7 de febrero de 1937</dd>
+    <dt>Muerte</dt>
+    <dd>2 de abril de 1974, a las 3, en Mutquín, de un síncope cardíaco. Tenía 63 años.</dd>
+    <dt>FamilySearch</dt>
+    <dd><a href="https://www.familysearch.org/es/tree/person/details/GJC8-5V3" target="_blank" rel="noopener">GJC8-5V3</a><small>Allí figura como Juan Serapio</small></dd>
+  </dl>
+
+  <section class="note" aria-labelledby="dudas">
+    <h3 id="dudas">Lo que los papeles no dicen igual</h3>
+    <ul>
+      <li><strong>El nombre.</strong> Las actas civiles de 1910, 1937 y 1974 dicen José Serapio, y así firmó. Solo el bautismo de 1911 lo anota como Juan Serapio, probablemente por un error del cura.</li>
+      <li><strong>El día que nació.</strong> El acta civil, hecha dos días después con su padre como declarante, dice el 13 de noviembre. El bautismo, nueve meses más tarde, dice el 20. El acta de defunción dice el 15, que es en realidad el día en que lo anotaron. Tomamos el 13.</li>
+    </ul>
+  </section>
+
+  <section class="section-head">
+    <span class="label">Documentos</span>
+    <h2>Sus actas, una por una</h2>
+    <p>Las imágenes vienen de FamilySearch, cortesía del Registro Civil de Catamarca y de la parroquia de Saujil. Tocá cualquiera para verla entera. Las transcripciones siguen el original con ortografía actual; las fórmulas legales más largas van resumidas y lo dudoso va con (?).</p>
+  </section>
+
+  <div class="docs">
+
+    <article class="doc" id="nacimiento">
+      <span class="label">1910 · Registro Civil</span>
+      <h3>Acta de nacimiento</h3>
+      <p class="ref">Registro Civil de Mutquín, departamento Pomán. Acta N.º 85, folios 111–112. Copia certificada, convalidada por la ley 3120.</p>
+      <div class="imgs">
+        <figure>
+          <a href="../actas/nacimiento-jose-serapio-1910-1.jpg" target="_blank" rel="noopener"><img src="../actas/nacimiento-jose-serapio-1910-1.jpg" width="578" height="792" loading="lazy" alt="Folio 111 del libro de nacimientos de Pomán, con el comienzo del acta 85 de José Serapio Chasampi."></a>
+          <figcaption>Folio 111: comienzo del acta.</figcaption>
+        </figure>
+        <figure>
+          <a href="../actas/nacimiento-jose-serapio-1910-2.jpg" target="_blank" rel="noopener"><img src="../actas/nacimiento-jose-serapio-1910-2.jpg" width="605" height="792" loading="lazy" alt="Folio 112: continuación del acta 85, con los abuelos y los testigos."></a>
+          <figcaption>Folio 112: abuelos y testigos.</figcaption>
+        </figure>
+      </div>
+      <div class="trans">
+        <p class="marg">Al margen: José Serapio Chasampi.</p>
+        <p>Número ochenta y cinco. En Mutquín, Distrito del Departamento de Pomán, Provincia de Catamarca, a días quince de noviembre de mil novecientos diez, ante mí, José C. Segura, Jefe del Registro Civil, compareció don Eleuterio Chasampi, argentino, casado, de cincuenta años, labrador, domiciliado en Mutquín, y declaró que el día trece del corriente mes y año, a horas dos p. m., había nacido una criatura del sexo masculino que había recibido el nombre de José Serapio, que tiene por hijo legítimo del declarante y de su esposa Dalinda Calsapi, argentina, casada, costurera, de veinticinco años, domiciliada en Mutquín.</p>
+        <p>Que el declarante es hijo de Pedro P. Chasampi, argentino, ya finado, y de su esposa Antonia Aguilar, argentina, ya finada. Que Dalinda Calsapi es hija de Juan P. Calsapi, argentino, casado, labrador, de setenta (?) años, domiciliado en Mutquín, y de su esposa Segunda Carrizo, argentina, casada, costurera, de cincuenta y cinco años, domiciliada en Mutquín.</p>
+        <p>Leída el acta, la firmó conmigo el declarante y los testigos Andrónico Basán, casado, de cuarenta y seis (?) años, y P. Segura (?), ambos argentinos, labradores, domiciliados en Mutquín. Andrónico Basán. P. Segura. José C. Segura. Es fiel copia, de que certifico.</p>
+      </div>
+      <p class="aporta"><strong>Qué aporta:</strong> la fecha y la hora exactas del nacimiento, el nombre José Serapio y los cuatro abuelos con nombre y apellido. Es el documento más cercano a su nacimiento.</p>
+    </article>
+
+    <article class="doc" id="bautismo">
+      <span class="label">1911 · Parroquia de Saujil</span>
+      <h3>Partida de bautismo</h3>
+      <p class="ref">Parroquia de Saujil, libro de bautismos, página 360, partida N.º 719.</p>
+      <div class="imgs">
+        <figure>
+          <a href="../actas/bautismo-jose-serapio-1911.jpg" target="_blank" rel="noopener"><img src="../actas/bautismo-jose-serapio-1911.jpg" width="1225" height="955" loading="lazy" alt="Partida 719 del libro de bautismos de Saujil, con la nota al margen de su casamiento en 1937."></a>
+          <figcaption>Partida 719, con la nota de casamiento al margen.</figcaption>
+        </figure>
+      </div>
+      <div class="trans">
+        <p class="marg">Al margen: N.º 719. Juan Serapio Chasampi.</p>
+        <p>En esta Capilla del Señor de la Salud de Mutquín, de este Curato, a los veintidós días de agosto del año del Señor de mil novecientos once, yo, el infrascrito Cura Vicario de esta Parroquia, puse óleo y crisma a un párvulo nacido el día veinte de noviembre del año anterior, al cual puse por nombre Juan Serapio, hijo legítimo de Eleuterio Chasampi y Dalinda Calsapi, vecinos de Mutquín. Fue madrina Brígida Arévalo, vecina del mismo lugar. Juan C. Bianchi, Cura Vicario.</p>
+        <p class="marg">Nota al margen, agregada en 1937: Se casó con Adelina Altamiranda el primero de febrero de 1937 en esta Iglesia Parroquial de Saujil. Pbro. David Zelarayán, Vicario Cooperador.</p>
+      </div>
+      <p class="aporta"><strong>Qué aporta:</strong> sus padres, su madrina y la confirmación del casamiento religioso. Acá aparecen el nombre "Juan" y el día 20, que no coinciden con las actas civiles.</p>
+    </article>
+
+    <article class="doc" id="casamiento">
+      <span class="label">1937 · Registro Civil</span>
+      <h3>Acta de matrimonio</h3>
+      <p class="ref">Registro Civil de Saujil, departamento Pomán. Acta N.º 3, folio 22.</p>
+      <div class="imgs">
+        <figure>
+          <a href="../actas/matrimonio-1937-folio-22.jpg" target="_blank" rel="noopener"><img src="../actas/matrimonio-1937-folio-22.jpg" width="1165" height="1600" loading="lazy" alt="Folio 22: los novios y sus padres."></a>
+          <figcaption>Folio 22: los novios y sus padres.</figcaption>
+        </figure>
+        <figure>
+          <a href="../actas/matrimonio-1937-firmas.jpg" target="_blank" rel="noopener"><img src="../actas/matrimonio-1937-firmas.jpg" width="1251" height="1600" loading="lazy" alt="Continuación: testigos y firmas."></a>
+          <figcaption>Continuación: testigos y firmas.</figcaption>
+        </figure>
+      </div>
+      <div class="trans">
+        <p class="marg">Al margen: Chasampi, José Serapio.</p>
+        <p>Acta número tres. En Saujil, Departamento de Pomán, Provincia de Catamarca, el día uno de febrero de mil novecientos treinta y siete, ante mí, Pedro A. Carrizo, Jefe del Registro del Estado Civil, comparecieron: don José Serapio Chasampi, de nacionalidad argentino, de veintiséis años de edad, de profesión labrador, de estado soltero, nacido en Mutquín, Departamento Pomán, domiciliado en Mutquín, hijo legítimo de don Eleuterio Chasampi (fallecido) y de doña Dalinda Calsapi, de nacionalidad argentina, de cuarenta y nueve años de edad, domiciliada en Mutquín; y doña Adelina Altamiranda, de nacionalidad argentina, de estado soltera, de veinticuatro años de edad, nacida en Mutquín, domiciliada en Mutquín, hija legítima de don Agustín Altamiranda, de nacionalidad argentino, de cuarenta y ocho años de edad, de profesión labrador, domiciliado en Mutquín, y de doña Ramona Chasampi, de nacionalidad argentina, de cuarenta años de edad, domiciliada en Mutquín. Ambos comparecientes expusieron que era su voluntad casarse, tomándose recíprocamente por marido y mujer, y que no había impedimento alguno para la celebración de su matrimonio.</p>
+        <p>Los testigos, don José Zenón Chasampi, de treinta y dos años de edad, argentino, casado, albañil; don Juan Tomás Solohaga, de cuarenta años, argentino, casado, labrador; don Domingo Caliva, de veinticuatro años, argentino, soltero, labrador; y don Azarías Salazar, de treinta y dos años, argentino, casado, labrador, todos domiciliados en Mutquín, hábiles para este acto, declararon sobre la identidad de los futuros esposos y que, por el conocimiento que de ellos tenían, los creían hábiles para contraer matrimonio.</p>
+        <p>No habiéndose deducido oposición ni denuncia, y previa lectura de los artículos 51, 52 y 53 de la Ley de Matrimonio, interrogué a don José Serapio Chasampi si quería por esposa a doña Adelina Altamiranda, y a ella si quería por esposo a él. Habiendo contestado los dos que sí, en nombre de la Ley declaro que don José Serapio Chasampi y doña Adelina Altamiranda quedan unidos en legítimo matrimonio. Para constancia firman por ante mí y los testigos.</p>
+        <p class="marg">Firmas: Adelina Altamiranda, José S. Chasampi, José Zenón Chasampi, Juan T. Solohaga, Domingo Caliva, Azarías Salazar, Pedro A. Carrizo.</p>
+      </div>
+      <p class="aporta"><strong>Qué aporta:</strong> su edad y su oficio, que su padre ya había muerto, y los padres de la novia. Lo firma él mismo como José. El testigo José Zenón (o Juan Zenón) es su hermano. Seis días después nació María Primitiva.</p>
+    </article>
+
+    <article class="doc" id="defuncion">
+      <span class="label">1974 · Registro Civil</span>
+      <h3>Acta de defunción</h3>
+      <p class="ref">Registro Civil de Mutquín, departamento Pomán. Testimonio del acta N.º 2, folio 59.</p>
+      <div class="imgs">
+        <figure>
+          <a href="../actas/defuncion-jose-serapio-1974.jpg" target="_blank" rel="noopener"><img src="../actas/defuncion-jose-serapio-1974.jpg" width="568" height="796" loading="lazy" alt="Acta de defunción de José Serapio Chasampi, 1974, página completa."></a>
+          <figcaption>La página completa.</figcaption>
+        </figure>
+        <figure>
+          <a href="../actas/defuncion-jose-serapio-1974-detalle.jpg" target="_blank" rel="noopener"><img src="../actas/defuncion-jose-serapio-1974-detalle.jpg" width="967" height="796" loading="lazy" alt="Detalle ampliado del acta: datos del fallecido, de su muerte, de sus padres y del declarante."></a>
+          <figcaption>Detalle ampliado.</figcaption>
+        </figure>
+      </div>
+      <div class="trans">
+        <p>Testimonio. Acta número dos. En Mutquín, Departamento de Pomán, Provincia de Catamarca, República Argentina, a (?) días del mes de abril de mil novecientos setenta y cuatro, yo, María Aurelia Contreras de Aparicio, Jefe Seccional del Registro del Estado Civil, procedí a inscribir la defunción de José Serapio Chasampi, nacido el 15-11-1910, de nacionalidad argentino, de sexo masculino, de sesenta y tres años de edad, de profesión agricultor, de estado casado con Ramona Adelina Altamiranda; se domiciliaba en Mutquín. Clase 1910.</p>
+        <p>Ocurrida en Mutquín el día dos del mes de abril de mil novecientos setenta y cuatro, a horas tres, a consecuencia de síncope cardíaco, según certificado otorgado por el doctor Genaro Aurelio Ollantes (?).</p>
+        <p>Era hijo de don José Eleuterio Chasampi (fallecido) y de doña Rosa Dalinda Calsapi (fallecida).</p>
+        <p>Esta inscripción se efectúa según declaración prestada por don Juan Nieva, de sesenta y cinco años, casado, argentino, agricultor, domiciliado en Mutquín, Pomán. Leída el acta, se ratifica en su contenido y la firma conmigo el declarante.</p>
+        <p class="marg">Nota: denunció con certificado médico, conforme al decreto ley 8204/63. Firmas del declarante y de la jefa seccional, con el sello de la Sección Mutquín.</p>
+      </div>
+      <p class="aporta"><strong>Qué aporta:</strong> el día, la hora y la causa de su muerte, y que seguía casado con Ramona Adelina Altamiranda. Confirma otra vez a sus padres, que ya habían muerto.</p>
+    </article>
+
+  </div>
+
+  <section class="note" aria-labelledby="otros">
+    <h3 id="otros">Otros rastros, sin imagen todavía</h3>
+    <ul>
+      <li>En 1938 vivía con Adelina en el Ingenio Ledesma, en Jujuy, donde murió una hija recién nacida. Él tenía 27 años y ella 26. Hay otros registros de la familia en Salta (1946) y otra vez en Catamarca (1951).</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Parte de <a href="../">Raíces Chasampi</a>, investigación familiar de Santiago Martín Sola.</p>
+  </footer>
+
+</main>
+</body>
+</html>
