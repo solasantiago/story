@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="La historia del linaje Chasampi de Mutquín, Catamarca: de la cultura La Aguada al cacique Juan Mateo Chasampi y María Primitiva.">
+<meta name="description" content="La historia del linaje Chasampi de Mutquín, Catamarca: de la cultura La Aguada al cacique Juan Mateo Chasampi, y de ahí a María Primitiva y sus padres.">
 <style>*,*::before,*::after{box-sizing:border-box}:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Raíces Chasampi</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -73,7 +73,6 @@ a:focus-visible { outline: 2px solid var(--ochre); outline-offset: 2px; border-r
   color: var(--ochre);
 }
 
-/* Greca escalonada, motivo de la cerámica del noroeste */
 .greca {
   height: 12px;
   background: var(--accent);
@@ -82,27 +81,17 @@ a:focus-visible { outline: 2px solid var(--ochre); outline-offset: 2px; border-r
   opacity: 0.85;
 }
 
-/* Portada */
 .hero { display: flex; flex-direction: column; gap: 1rem; }
 .hero h1 { font-size: clamp(2.6rem, 11vw, 4rem); font-weight: 700; letter-spacing: -0.01em; }
 .hero h1 em { font-style: italic; font-weight: 500; color: var(--accent); }
 .lede { font-size: 1.15rem; color: var(--fg); max-width: 34rem; }
-.dedica {
-  font-family: var(--display);
-  font-style: italic;
-  color: var(--muted);
-  border-left: 2px solid var(--ochre);
-  padding-left: 0.9rem;
-}
 
-/* Dónde y quiénes */
 .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
 .pair div { background: var(--surface); border-radius: 6px; padding: 1rem; display: flex; flex-direction: column; gap: 0.35rem; min-width: 0; }
 .pair strong { font-family: var(--display); font-size: 1.35rem; }
 .pair p { color: var(--muted); font-size: 0.97rem; }
 @media (max-width: 420px) { .pair { grid-template-columns: 1fr; } }
 
-/* Línea de tiempo */
 .section-head { display: flex; flex-direction: column; gap: 0.5rem; }
 .section-head h2 { font-size: 1.9rem; }
 .timeline { list-style: none; margin: 0; padding: 0; position: relative; display: flex; flex-direction: column; gap: 2.5rem; }
@@ -137,7 +126,25 @@ a:focus-visible { outline: 2px solid var(--ochre); outline-offset: 2px; border-r
   color: var(--accent);
 }
 
-/* Linaje */
+/* Ficha de documento: el dato tal como figura en el libro */
+.doc {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.9rem 1rem;
+  display: flex; flex-direction: column; gap: 0.35rem;
+  font-size: 0.95rem;
+}
+.doc .ref { font-family: var(--label); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.06em; color: var(--muted); }
+.doc p { font-family: var(--display); font-style: italic; color: var(--fg); }
+
+/* Actas: la imagen del libro, tocable para verla entera */
+.acta { margin: 0; display: flex; flex-direction: column; gap: 0.4rem; min-width: 0; }
+.acta a { display: block; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; background: var(--surface); }
+.acta img { display: block; width: 100%; height: auto; }
+.acta figcaption { font-size: 0.88rem; color: var(--muted); }
+.actas-par { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+@media (max-width: 420px) { .actas-par { grid-template-columns: 1fr; } }
+
 .lineage { display: flex; flex-direction: column; gap: 0; }
 .gen { display: grid; grid-template-columns: 5.5rem 1fr; gap: 1rem; padding-block: 0.9rem; border-top: 1px solid var(--line); align-items: baseline; }
 .gen:last-child { border-bottom: 1px solid var(--line); }
@@ -147,9 +154,11 @@ a:focus-visible { outline: 2px solid var(--ochre); outline-offset: 2px; border-r
 .gen .who span { color: var(--muted); font-size: 0.95rem; }
 .gen.gap .who strong { font-style: italic; font-weight: 500; color: var(--muted); }
 
-/* Fuentes */
 .sources ol { margin: 0; padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.55rem; font-size: 0.95rem; color: var(--muted); }
 .sources ol span { color: var(--fg); }
+.sources h3 { font-family: var(--label); font-weight: 700; font-size: 0.9rem; letter-spacing: 0.06em; color: var(--ochre); margin-bottom: 0.5rem; }
+.sources .group { display: flex; flex-direction: column; }
+.sources .groups { display: flex; flex-direction: column; gap: 1.5rem; }
 footer { color: var(--muted); font-size: 0.9rem; display: flex; flex-direction: column; gap: 1rem; }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -257,9 +266,66 @@ footer { color: var(--muted); font-size: 0.9rem; display: flex; flex-direction: 
     </li>
 
     <li class="era">
+      <span class="label">c. 1888 – 1897</span>
+      <h3>Las dos parejas de Mutquín</h3>
+      <p>Hacia fines del siglo XIX nacen en Mutquín los cuatro bisabuelos de María Primitiva. Sus años salen de las edades que declararon en 1937, así que son aproximados.</p>
+      <ul>
+        <li><strong>Eleuterio Chasampi</strong> y <strong>Dalinda Calsapi</strong>, ella nacida hacia 1888. Eleuterio murió antes de 1937.</li>
+        <li><strong>Agustín Altamiranda</strong>, nacido hacia 1889 y labrador, y <strong>Ramona Chasampi</strong>, nacida hacia 1897.</li>
+      </ul>
+      <p>Las dos parejas estaban casadas por la Iglesia: los libros de Saujil anotan a sus hijos como "legítimos".</p>
+    </li>
+
+    <li class="era">
+      <span class="label">1910 – 1913</span>
+      <h3>Nacen Juan Serapio y Adelina</h3>
+      <p><strong>Juan Serapio Chasampi</strong> nace el 20 de noviembre de 1910, hijo de Eleuterio y Dalinda. Lo bautizan el 22 de agosto de 1911 en la Capilla del Señor de la Salud de Mutquín. Su madrina fue Brígida Arévalo.</p>
+      <p><strong>Ramona Adelina Altamiranda</strong> nace el 17 de noviembre de 1912, hija de Agustín y Ramona. La bautizan el 23 de enero de 1913 en la capilla de Pomán.</p>
+      <p>Las dos partidas las firma el mismo cura vicario de Saujil, Juan C. Bianchi.</p>
+      <div class="doc">
+        <span class="ref">Parroquia de Saujil · partida 719 · 1911</span>
+        <p>"...al cual puse por nombre Juan Serapio, hijo legítimo de Eleuterio Chasampi y Dalinda Calsapi, vecinos de Mutquín."</p>
+      </div>
+      <figure class="acta">
+        <a href="actas/bautismo-juan-serapio-1911.jpg" target="_blank" rel="noopener"><img src="actas/bautismo-juan-serapio-1911.jpg" width="1225" height="955" loading="lazy" alt="Partida 719 del libro de bautismos de Saujil: bautismo de Juan Serapio Chasampi, con la nota al margen de su casamiento con Adelina Altamiranda."></a>
+        <figcaption>Bautismo de Juan Serapio, partida 719. Al margen, la nota de su casamiento en 1937.</figcaption>
+      </figure>
+      <figure class="acta">
+        <a href="actas/bautismo-ramona-adelina-1913.jpg" target="_blank" rel="noopener"><img src="actas/bautismo-ramona-adelina-1913.jpg" width="1600" height="1195" loading="lazy" alt="Partida 128 del libro de bautismos de Saujil: bautismo de Ramona Adelina, hija de José Altamiranda y María Ramona Chasampi."></a>
+        <figcaption>Bautismo de Ramona Adelina, partida 128. Tocá cualquier acta para verla entera.</figcaption>
+      </figure>
+      <div class="note">
+        <h4>Chasampi por los dos lados</h4>
+        <p>La madre de Adelina también era Chasampi. Por eso María Primitiva lleva el apellido por la rama de su padre y por la de su madre.</p>
+      </div>
+    </li>
+
+    <li class="era key">
+      <span class="label">1 de febrero de 1937</span>
+      <h3>El casamiento en Saujil</h3>
+      <p>José Serapio Chasampi, de 26 años y labrador, se casa con Adelina Altamiranda, de 24. El mismo día se casan ante el Registro Civil de Saujil, con Pedro A. Carrizo como jefe del registro, y en la Iglesia Parroquial de Saujil, ante el presbítero David Zelarayán.</p>
+      <p>Fueron testigos José Zenón Chasampi, albañil, Juan Tomás Solohaga, Domingo Caliva y Azarías Salazar, todos de Mutquín.</p>
+      <div class="actas-par">
+        <figure class="acta">
+          <a href="actas/matrimonio-1937-folio-22.jpg" target="_blank" rel="noopener"><img src="actas/matrimonio-1937-folio-22.jpg" width="1165" height="1600" loading="lazy" alt="Acta 3, folio 22, del Registro Civil de Saujil: casamiento de José Serapio Chasampi y Adelina Altamiranda, con los datos de sus padres."></a>
+          <figcaption>Acta 3, folio 22: los novios y sus padres.</figcaption>
+        </figure>
+        <figure class="acta">
+          <a href="actas/matrimonio-1937-firmas.jpg" target="_blank" rel="noopener"><img src="actas/matrimonio-1937-firmas.jpg" width="1251" height="1600" loading="lazy" alt="Continuación del acta de matrimonio: testigos, declaración del jefe del Registro Civil y firmas de los novios."></a>
+          <figcaption>La continuación: testigos y firmas.</figcaption>
+        </figure>
+      </div>
+      <div class="note">
+        <h4>Un nombre, dos versiones</h4>
+        <p>En los papeles de la Iglesia él figura como <strong>Juan</strong> Serapio y en el Registro Civil como <strong>José</strong> Serapio. Con el padre de Adelina pasa lo mismo: José en el bautismo, Agustín en el casamiento. Era común usar uno u otro de los nombres de pila.</p>
+      </div>
+    </li>
+
+    <li class="era">
       <span class="label">7 de febrero de 1937</span>
       <h3>Nace María Primitiva Chasampi</h3>
-      <p>En Mutquín, descendiente del cacique Chasampi. Con ella, esta historia de más de mil años llega a la familia Sola.</p>
+      <p>Seis días después del casamiento de sus padres, Juan Serapio y Adelina, nace en Mutquín. Después vendrían sus hermanas Norma e Isabel.</p>
+      <p>Descendiente del cacique Chasampi, con ella esta historia de más de mil años llega a la familia Sola.</p>
     </li>
 
     <li class="era">
@@ -284,7 +350,19 @@ footer { color: var(--muted); font-size: 0.9rem; display: flex; flex-direction: 
     </div>
     <div class="gen gap">
       <span class="yr">· · ·</span>
-      <div class="who"><strong>Generaciones por descubrir</strong><span>El camino que une al cacique con María Primitiva</span></div>
+      <div class="who"><strong>Generaciones por descubrir</strong><span>El camino que une al cacique con Eleuterio Chasampi</span></div>
+    </div>
+    <div class="gen">
+      <span class="yr">c. 1888</span>
+      <div class="who"><strong>Eleuterio Chasampi y Dalinda Calsapi</strong><span>Padres de Juan Serapio</span></div>
+    </div>
+    <div class="gen">
+      <span class="yr">c. 1889</span>
+      <div class="who"><strong>Agustín Altamiranda y Ramona Chasampi</strong><span>Padres de Adelina</span></div>
+    </div>
+    <div class="gen">
+      <span class="yr">1910 · 1912</span>
+      <div class="who"><strong>Juan Serapio Chasampi y Adelina Altamiranda</strong><span>Casados el 1 de febrero de 1937 en Saujil</span></div>
     </div>
     <div class="gen">
       <span class="yr">1937</span>
@@ -305,21 +383,35 @@ footer { color: var(--muted); font-size: 0.9rem; display: flex; flex-direction: 
       <span class="label">Fuentes</span>
       <h2 id="fuentes" style="font-size:1.5rem">De dónde sale cada dato</h2>
     </div>
-    <ol>
-      <li><span>Gabriela de la Orden de Peracca, <em>Pueblos indios de Pomán. Catamarca (siglos XVII a XIX)</em>.</span> Buenos Aires, Dunken, 2006. Colpes, Mutquín y el cacique Chasampi.</li>
-      <li><span><a href="https://es.wikipedia.org/wiki/Cultura_de_la_Aguada" target="_blank" rel="noopener">Cultura de la Aguada</a>, Wikipedia.</span> Fechas, ubicación y origen del nombre.</li>
-      <li><span>"Aguada", Proyecto AbRiGo, UNTREF.</span> Unidad cultural y expresiones regionales.</li>
-      <li><span>"Réplicas de cerámica de la cultura de La Aguada", Arte cerámico precolombino.</span> Cerámica, el felino y la metalurgia.</li>
-      <li><span><a href="https://es.wikipedia.org/wiki/Cultura_santamariana" target="_blank" rel="noopener">Cultura santamariana</a>, Wikipedia.</span> Cronología y urnas funerarias.</li>
-      <li><span>"Cronología de las culturas agroalfareras del noroeste argentino".</span> Continuidad entre La Aguada, Belén y Santa María.</li>
-      <li><span><a href="https://es.wikipedia.org/wiki/Pueblo_diaguita" target="_blank" rel="noopener">Pueblo diaguita</a>, Wikipedia.</span> La lengua cacán y el origen del nombre.</li>
-      <li><span>"Diaguita", Pueblos Originarios.</span> Las Guerras Calchaquíes.</li>
-      <li><span>"Las encomiendas en la Gobernación del Tucumán", Historia de Salta.</span> La encomienda y el tributo.</li>
-      <li><span>"Encomiendas y mitas", Historia Argentina, Gobernación de Tucumán.</span> Mita y yanaconazgo.</li>
-      <li><span>"No podemos permitir que nos sigan tratando con el apelativo que nos puso Colón", diario El Esquiú.</span> El homenaje a Juan Mateo Chasampi y la recuperación de Colpes.</li>
-      <li><span>"Pomán: descendiente de aborigen en contra de libro", blog Rincón, departamento Pomán.</span> La posición de la comunidad diaguita de Pomán.</li>
-      <li><span>"Comparsas de Mutquín. Coplas, color y ritual", diario El Esquiú.</span> Las comparsas Diaguita y Calchaquí.</li>
-    </ol>
+    <div class="groups">
+      <div class="group">
+        <h3>Documentos de la familia</h3>
+        <ol>
+          <li><span>Bautismo de Juan Serapio Chasampi.</span> Parroquia de Saujil, libro de bautismos, página 360, partida 719, 1911. Imagen en FamilySearch.</li>
+          <li><span>Bautismo de Ramona Adelina Altamiranda.</span> Parroquia de Saujil, página 69, partida 128, 1913. Imagen en FamilySearch.</li>
+          <li><span>Matrimonio civil de José Serapio Chasampi y Adelina Altamiranda.</span> Registro Civil de Saujil, departamento Pomán, 1937, acta 3, folio 22. Cortesía del Registro Civil de Catamarca, imagen en FamilySearch.</li>
+          <li><span>Testimonio de Norma Esther Chasampi,</span> octubre de 2026. Los nombres de sus padres.</li>
+        </ol>
+      </div>
+      <div class="group">
+        <h3>Historia y contexto</h3>
+        <ol>
+          <li><span>Gabriela de la Orden de Peracca, <em>Pueblos indios de Pomán. Catamarca (siglos XVII a XIX)</em>.</span> Buenos Aires, Dunken, 2006. Colpes, Mutquín y el cacique Chasampi.</li>
+          <li><span><a href="https://es.wikipedia.org/wiki/Cultura_de_la_Aguada" target="_blank" rel="noopener">Cultura de la Aguada</a>, Wikipedia.</span> Fechas, ubicación y origen del nombre.</li>
+          <li><span>"Aguada", Proyecto AbRiGo, UNTREF.</span> Unidad cultural y expresiones regionales.</li>
+          <li><span>"Réplicas de cerámica de la cultura de La Aguada", Arte cerámico precolombino.</span> Cerámica, el felino y la metalurgia.</li>
+          <li><span><a href="https://es.wikipedia.org/wiki/Cultura_santamariana" target="_blank" rel="noopener">Cultura santamariana</a>, Wikipedia.</span> Cronología y urnas funerarias.</li>
+          <li><span>"Cronología de las culturas agroalfareras del noroeste argentino".</span> Continuidad entre La Aguada, Belén y Santa María.</li>
+          <li><span><a href="https://es.wikipedia.org/wiki/Pueblo_diaguita" target="_blank" rel="noopener">Pueblo diaguita</a>, Wikipedia.</span> La lengua cacán y el origen del nombre.</li>
+          <li><span>"Diaguita", Pueblos Originarios.</span> Las Guerras Calchaquíes.</li>
+          <li><span>"Las encomiendas en la Gobernación del Tucumán", Historia de Salta.</span> La encomienda y el tributo.</li>
+          <li><span>"Encomiendas y mitas", Historia Argentina, Gobernación de Tucumán.</span> Mita y yanaconazgo.</li>
+          <li><span>"No podemos permitir que nos sigan tratando con el apelativo que nos puso Colón", diario El Esquiú.</span> El homenaje a Juan Mateo Chasampi y la recuperación de Colpes.</li>
+          <li><span>"Pomán: descendiente de aborigen en contra de libro", blog Rincón, departamento Pomán.</span> La posición de la comunidad diaguita de Pomán.</li>
+          <li><span>"Comparsas de Mutquín. Coplas, color y ritual", diario El Esquiú.</span> Las comparsas Diaguita y Calchaquí.</li>
+        </ol>
+      </div>
+    </div>
   </section>
 
   <footer>
