@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Ramona Adelina Altamiranda (1912–1990), madre de María Primitiva Chasampi: datos y actas transcriptas.">
+<title>Ramona Adelina Altamiranda</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta name="theme-color" content="#1c1a19">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,700;1,500&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Alegreya+Sans+SC:wght@500;700&display=swap">
+<style>
+/* Ficha de persona: misma paleta y tipografía que Raíces Chasampi. Una columna; cada acta es una tarjeta con imagen y transcripción. */
+*,*::before,*::after{box-sizing:border-box}
+:root {
+  --bg: #e8e3dc; --surface: #f3efe9; --fg: #2a2522; --muted: #6b605a;
+  --line: #c9bfb3; --accent: #8e3b22; --ochre: #8a5f16;
+  --display: "Alegreya", Georgia, "Times New Roman", serif;
+  --body: "Alegreya Sans", "Segoe UI", system-ui, sans-serif;
+  --label: "Alegreya Sans SC", "Alegreya Sans", system-ui, sans-serif;
+  color-scheme: light;
+  padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1c1a19; --surface: #262321; --fg: #ece5dc; --muted: #a89c91;
+    --line: #3e3833; --accent: #d9805f; --ochre: #d6a94f; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1c1a19; --surface: #262321; --fg: #ece5dc; --muted: #a89c91;
+  --line: #3e3833; --accent: #d9805f; --ochre: #d6a94f; color-scheme: dark;
+}
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 1.0625rem; line-height: 1.6; }
+img { max-width: 100%; }
+.page { max-width: 44rem; margin: 0 auto; padding-inline: 1.25rem; padding-block: 1.5rem 4rem; display: flex; flex-direction: column; gap: 2.5rem; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; line-height: 1.15; margin: 0; }
+p { margin: 0; }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--ochre); outline-offset: 2px; border-radius: 2px; }
+.label { font-family: var(--label); font-weight: 700; font-size: 0.85rem; letter-spacing: 0.08em; color: var(--ochre); }
+.back { font-family: var(--label); font-weight: 700; letter-spacing: 0.06em; font-size: 0.9rem; text-decoration: none; }
+
+.hero { display: flex; flex-direction: column; gap: 0.6rem; }
+.vinculo { align-self: flex-start; background: var(--accent); color: var(--bg); font-family: var(--label); font-weight: 700; letter-spacing: 0.06em; font-size: 0.9rem; padding: 0.25rem 0.7rem; border-radius: 4px; }
+.hero h1 { font-size: clamp(2.2rem, 9vw, 3.2rem); font-weight: 700; }
+.hero .years { font-family: var(--display); font-style: italic; color: var(--muted); font-size: 1.2rem; }
+
+.ficha { display: grid; grid-template-columns: 8.5rem 1fr; border-top: 1px solid var(--line); }
+.ficha dt, .ficha dd { margin: 0; padding-block: 0.65rem; border-bottom: 1px solid var(--line); }
+.ficha dt { font-family: var(--label); font-weight: 700; letter-spacing: 0.05em; font-size: 0.85rem; color: var(--ochre); padding-top: 0.8rem; }
+.ficha dd { min-width: 0; }
+.ficha dd small { display: block; color: var(--muted); font-size: 0.9rem; }
+@media (max-width: 420px) { .ficha { grid-template-columns: 1fr; } .ficha dt { border-bottom: 0; padding-bottom: 0; } }
+
+.note { background: var(--surface); border-radius: 6px; padding: 1rem 1.1rem; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.98rem; }
+.note h3 { font-family: var(--label); font-weight: 700; font-size: 0.9rem; letter-spacing: 0.06em; color: var(--accent); }
+.note ul { margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 0.35rem; }
+
+.section-head { display: flex; flex-direction: column; gap: 0.4rem; }
+.section-head h2 { font-size: 1.8rem; }
+.docs { display: flex; flex-direction: column; gap: 2.5rem; }
+.doc { display: flex; flex-direction: column; gap: 0.9rem; border-top: 2px solid var(--accent); padding-top: 1rem; }
+.doc h3 { font-size: 1.4rem; }
+.doc .ref { color: var(--muted); font-size: 0.92rem; }
+.imgs { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 0.75rem; }
+.imgs a { display: block; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; background: var(--surface); }
+.imgs img { display: block; width: 100%; height: auto; }
+.imgs figure { margin: 0; display: flex; flex-direction: column; gap: 0.3rem; min-width: 0; }
+.imgs figcaption { font-size: 0.85rem; color: var(--muted); }
+.trans { font-family: var(--display); font-size: 1.05rem; line-height: 1.65; background: var(--surface); border-radius: 6px; padding: 1rem 1.1rem; display: flex; flex-direction: column; gap: 0.7rem; }
+.trans .marg { font-family: var(--body); font-size: 0.92rem; color: var(--muted); }
+.aporta { font-size: 0.98rem; }
+.ruta { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; border-left: 2px solid var(--line); }
+.ruta li { position: relative; padding: 0 0 1rem 1.2rem; display: grid; grid-template-columns: 4.5rem 1fr; gap: 0.75rem; }
+.ruta li::before { content: ""; position: absolute; left: -6px; top: 0.45rem; width: 10px; height: 10px; background: var(--bg); border: 2px solid var(--ochre); transform: rotate(45deg); }
+.ruta .y { font-family: var(--label); font-weight: 700; color: var(--ochre); font-variant-numeric: tabular-nums; }
+.ruta li > span:last-child { min-width: 0; }
+.aporta strong { font-family: var(--label); letter-spacing: 0.05em; color: var(--ochre); }
+footer { color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--line); padding-top: 1rem; }
+</style>
+</head>
+<body>
+<main class="page">
+
+  <a class="back" href="../">← Raíces Chasampi</a>
+
+  <header class="hero">
+    <span class="vinculo">Madre de María Primitiva</span>
+    <h1>Ramona Adelina Altamiranda</h1>
+    <p class="years">Pomán, 1912 – Catamarca, 1990</p>
+  </header>
+
+  <dl class="ficha" aria-label="Datos principales">
+    <dt>Nacimiento</dt>
+    <dd>17 de noviembre de 1912, a las 2 de la mañana, en Pomán (Catamarca)<small>Acta de nacimiento civil N.º 95</small></dd>
+    <dt>Bautismo</dt>
+    <dd>23 de enero de 1913, capilla de Pomán, parroquia de Saujil. Al nacer la bautizó de urgencia Manuel Ponce.<small>Partida 128</small></dd>
+    <dt>Padres</dt>
+    <dd>José Agustín Altamiranda, labrador, y María Ramona Chasampi, costurera</dd>
+    <dt>Abuelos</dt>
+    <dd>María Ramona Altamiranda, por parte de padre (ya muerta en 1912). Norberto Chasampi y Adelina Luna, por parte de madre.<small>Los nombra su acta de nacimiento</small></dd>
+    <dt>Nombre de uso</dt>
+    <dd>Adelina. Así figura en el casamiento y en las actas de sus hijos.</dd>
+    <dt>Casamiento</dt>
+    <dd>1 de febrero de 1937 en Saujil, por civil y por iglesia, con José Serapio Chasampi. Tenía 24 años.</dd>
+    <dt>Hijas</dt>
+    <dd>María Primitiva (1937), Norma (1952) e Isabel (1954), entre otros hijos que murieron chicos</dd>
+    <dt>Dónde vivió</dt>
+    <dd>Pomán y Mutquín, con años en los ingenios del norte: Lote Cañitas, Ingenio Ledesma (Jujuy, 1938) y Lote Lucrecia, Tabacal (Salta, 1946)</dd>
+    <dt>Oficio</dt>
+    <dd>Quehaceres domésticos<small>Acta de Salta, 1946</small></dd>
+    <dt>Viudez</dt>
+    <dd>Enviudó el 2 de abril de 1974, cuando murió José Serapio en Mutquín.</dd>
+    <dt>Muerte</dt>
+    <dd>6 de octubre de 1990, en San Fernando del Valle de Catamarca. Tenía 77 años.<small>Nota al margen de su acta de nacimiento: acta 686, folio 100, tomo 237 de defunciones de la Capital</small></dd>
+    <dt>FamilySearch</dt>
+    <dd><a href="https://www.familysearch.org/es/tree/person/details/G13W-PY8" target="_blank" rel="noopener">G13W-PY8</a><small>Hay una segunda ficha suya, GJCD-9G4, con datos equivocados</small></dd>
+  </dl>
+
+  <section class="note" aria-labelledby="dudas">
+    <h3 id="dudas">Lo que los papeles no dicen igual</h3>
+    <ul>
+      <li><strong>El día que nació.</strong> El acta civil, hecha a la mañana siguiente por su padre, dice que nació el 17 de noviembre a las 2 de la madrugada. La familia recuerda el 15 y el índice de FamilySearch dice 16 de octubre, un error de la computadora que lo transcribió. Tomamos el 17.</li>
+      <li><strong>El lugar.</strong> El acta civil y el bautismo la ubican en Pomán, donde vivían sus padres en 1912. En 1937 ella declaró haber nacido en Mutquín, el pueblo donde se crió.</li>
+      <li><strong>La edad de su madre.</strong> El acta de 1912 le da a María Ramona Chasampi veinte años; su casamiento de ese mismo año dice diecisiete y su bautismo indica que tenía quince.</li>
+      <li><strong>La ficha duplicada.</strong> En FamilySearch hay otra Adelina (GJCD-9G4) nacida "en 1916 en el Ingenio Ledesma". Sale de un error de lectura del acta de Jujuy de 1938: ese año y ese lugar son de su hija, no de ella.</li>
+    </ul>
+  </section>
+
+  <section class="section-head">
+    <span class="label">Documentos</span>
+    <h2>Sus actas, una por una</h2>
+    <p>Las imágenes vienen de FamilySearch, cortesía del Registro Civil de Catamarca, de Jujuy y de Salta, y de la parroquia de Saujil. Tocá cualquiera para verla entera. Las transcripciones siguen el original con ortografía actual; lo dudoso va con (?).</p>
+  </section>
+
+  <div class="docs">
+
+    <article class="doc" id="nacimiento">
+      <span class="label">1912 · Registro Civil</span>
+      <h3>Acta de nacimiento</h3>
+      <p class="ref">Registro Civil de Pomán. Partidas de nacimiento, tomo 6 (1911–1914), acta N.º 95.</p>
+      <div class="imgs">
+        <figure>
+          <a href="../actas/nacimiento-adelina-1912-1.jpg" target="_blank" rel="noopener"><img src="../actas/nacimiento-adelina-1912-1.jpg" width="760" height="673" loading="lazy" alt="Acta 95 de nacimientos de Pomán, 1912, con el sello de su defunción en 1990 al margen."></a>
+          <figcaption>Comienzo del acta. Al margen, el sello de su muerte en 1990.</figcaption>
+        </figure>
+        <figure>
+          <a href="../actas/nacimiento-adelina-1912-2.jpg" target="_blank" rel="noopener"><img src="../actas/nacimiento-adelina-1912-2.jpg" width="760" height="434" loading="lazy" alt="Final del acta 95, con los testigos y las firmas."></a>
+          <figcaption>Testigos y firmas.</figcaption>
+        </figure>
+      </div>
+      <div class="trans">
+        <p class="marg">Al margen: Ramona Adelina Altamiranda.</p>
+        <p>Número noventa y cinco. En Pomán, departamento de Pomán, provincia de Catamarca, a días diecisiete de noviembre de mil novecientos doce, ante mí, Manuel A. Navarro, Jefe del Registro Civil, Agustín Altamiranda, argentino, casado, labrador, de veintidós años, domiciliado en Pomán, declaró que el día de la fecha, a horas dos a. m., había nacido una criatura del sexo femenino que había recibido el nombre de Ramona Adelina, que era hija legítima del declarante y de su esposa María R. Chasampi, argentina, casada, costurera, de veinte (?) años, domiciliada en Pomán.</p>
+        <p>Que el declarante es hijo de María R. Altamiranda, argentina, que falleció. Que María R. Chasampi es hija de Norberto Chasampi, argentino, casado, labrador, de cuarenta años, domiciliado en Mutquín, y de su esposa Adelina Luna, argentina, casada, de treinta y siete años, domiciliada en Mutquín.</p>
+        <p>Leída el acta, la firmaron conmigo el declarante y los testigos Gregorio Nieva, argentino, casado, labrador, de treinta años, domiciliado en Pomán, y Bautista Nieva, argentino, casado (?), de veinticinco años, domiciliado en Pomán. Agustín Altamiranda. Gregorio Nieva. Bautista Nieva. Es fiel copia del original, de que certifico. Manuel A. Navarro.</p>
+        <p class="marg">Sello al margen, de 1990: "Inscripto falleció en Capital, Catamarca, el día 6, mes 10, año 1990. Acta 686, folio 100, tomo 237 del Registro de Defunciones Capital, Catamarca. S. F. del V. de Catamarca, 26 de octubre de 1990." Firma: Hilda Rosa Avellaneda, Jefe de División.</p>
+      </div>
+      <p class="aporta"><strong>Qué aporta:</strong> el día, la hora y el lugar exactos de su nacimiento; sus cuatro abuelos (uno solo del lado de su padre, porque él era hijo natural); y, gracias al sello que se agregó al morir, la fecha y el lugar de su muerte. Confirma que sus abuelos maternos eran Norberto Chasampi y Adelina Luna, y de ahí viene su segundo nombre.</p>
+    </article>
+
+    <article class="doc" id="bautismo">
+      <span class="label">1913 · Parroquia de Saujil</span>
+      <h3>Partida de bautismo</h3>
+      <p class="ref">Parroquia de Saujil, libro de bautismos, página 69, partida N.º 128.</p>
+      <div class="imgs">
+        <figure>
+          <a href="../actas/bautismo-ramona-adelina-1913.jpg" target="_blank" rel="noopener"><img src="../actas/bautismo-ramona-adelina-1913.jpg" width="1600" height="1195" loading="lazy" alt="Partida 128 del libro de bautismos de Saujil, con la nota de su casamiento al margen."></a>
+          <figcaption>Partida 128, con la nota de casamiento al margen.</figcaption>
+        </figure>
+      </div>
+      <div class="trans">
+        <p class="marg">Al margen: N.º 128. Ramona Adelina.</p>
+        <p>En la Capilla de Pomán de este Curato, a los veintitrés días del mes de enero de mil novecientos trece, yo, el infrascrito Cura Vicario de esta Parroquia, puse óleo y crisma y suplí las ceremonias del Bautismo a una párvula nacida el diecisiete de noviembre de mil novecientos doce, que fue bautizada privadamente por Manuel Ponce, facultado, a la cual puse por nombre Ramona Adelina, hija legítima de José Altamiranda y M.ª Ramona Chasampi, vecinos de Mutquín. Fue madrina Rosalía Romey (?), vecina de Pomán. Juan C. Bianchi, Cura Vicario.</p>
+        <p class="marg">Nota al margen: Se casó con Juan Serapio Chasampi en la Iglesia Parroquial de Saujil el 1.º de febrero de 1937. Pbro. David Zelarayán, Vicario Cooperador.</p>
+      </div>
+      <p class="aporta"><strong>Qué aporta:</strong> que la bautizaron de urgencia al nacer y que el cura completó la ceremonia dos meses después. Acá su padre figura como José; en el acta civil, como Agustín. Se llamaba José Agustín.</p>
+    </article>
+
+    <article class="doc" id="casamiento">
+      <span class="label">1937 · Registro Civil</span>
+      <h3>Acta de matrimonio</h3>
+      <p class="ref">Registro Civil de Saujil, departamento Pomán. Acta N.º 3, folio 22. La transcripción completa está en la <a href="jose-serapio.html#casamiento">ficha de José Serapio</a>.</p>
+      <div class="imgs">
+        <figure>
+          <a href="../actas/matrimonio-1937-folio-22.jpg" target="_blank" rel="noopener"><img src="../actas/matrimonio-1937-folio-22.jpg" width="1165" height="1600" loading="lazy" alt="Folio 22: los novios y sus padres."></a>
+          <figcaption>Folio 22: los novios y sus padres.</figcaption>
+        </figure>
+        <figure>
+          <a href="../actas/matrimonio-1937-firmas.jpg" target="_blank" rel="noopener"><img src="../actas/matrimonio-1937-firmas.jpg" width="1251" height="1600" loading="lazy" alt="Continuación: testigos y firmas, entre ellas la de Adelina Altamiranda."></a>
+          <figcaption>Testigos y firmas. La primera es la de ella.</figcaption>
+        </figure>
+      </div>
+      <div class="trans">
+        <p>"…y doña Adelina Altamiranda, de nacionalidad argentina, de estado soltera, de veinticuatro años de edad, nacida en Mutquín, domiciliada en Mutquín, hija legítima de don Agustín Altamiranda, de nacionalidad argentino, de cuarenta y ocho años de edad, de profesión labrador, domiciliado en Mutquín, y de doña Ramona Chasampi, de nacionalidad argentina, de cuarenta años de edad, domiciliada en Mutquín."</p>
+        <p class="marg">Firmó ella misma: "Adelina Altamiranda".</p>
+      </div>
+      <p class="aporta"><strong>Qué aporta:</strong> su edad, que sabía firmar y que sus padres seguían vivos y en Mutquín en 1937. Seis días después nació María Primitiva.</p>
+    </article>
+
+  </div>
+
+  <section class="section-head" id="norte">
+    <span class="label">1938 – 1951</span>
+    <h2>Los años en el norte</h2>
+    <p>Adelina acompañó a José Serapio a los ingenios azucareros de Jujuy y Salta. En tres actas de esos años aparece como la madre de hijos que murieron muy chicos. Las tres están transcriptas completas en la <a href="jose-serapio.html#norte">ficha de José Serapio</a>, que fue quien las declaró.</p>
+  </section>
+
+  <ol class="ruta" aria-label="Recorrido de Adelina">
+    <li><span class="y">1937</span><span>Se casa en Saujil y nace María Primitiva en Mutquín.</span></li>
+    <li><span class="y">1938</span><span>Vive en el Lote Cañitas del Ingenio Ledesma, en Jujuy. Tiene 26 años.</span></li>
+    <li><span class="y">c. 1943</span><span>Nace un hijo en el departamento Pomán.</span></li>
+    <li><span class="y">1946</span><span>Vive en el Lote Lucrecia, en Tabacal, Salta. Se dedica a los quehaceres de la casa.</span></li>
+    <li><span class="y">1951</span><span>Vive otra vez en Mutquín.</span></li>
+    <li><span class="y">1952 · 1954</span><span>Nacen Norma e Isabel.</span></li>
+    <li><span class="y">1974</span><span>Muere José Serapio en Mutquín.</span></li>
+    <li><span class="y">1990</span><span>Muere en San Fernando del Valle de Catamarca, la capital de la provincia.</span></li>
+  </ol>
+
+  <div class="docs">
+    <article class="doc" id="norte-actas">
+      <span class="label">1938 · 1946 · 1951</span>
+      <h3>Las tres actas</h3>
+      <div class="imgs">
+        <figure>
+          <a href="../actas/jujuy-1938-2.jpg" target="_blank" rel="noopener"><img src="../actas/jujuy-1938-2.jpg" width="992" height="796" loading="lazy" alt="Acta de Jujuy, 1938, donde se nombra a Adelina Altamiranda, de veintiséis años."></a>
+          <figcaption>Ingenio Ledesma, Jujuy, 1938: "su esposa doña Adelina Altamiranda, argentina, de veintiséis años, casada".</figcaption>
+        </figure>
+        <figure>
+          <a href="../actas/salta-1946-1.jpg" target="_blank" rel="noopener"><img src="../actas/salta-1946-1.jpg" width="1058" height="796" loading="lazy" alt="Acta de Tabacal, Salta, 1946, donde se nombra a Adelina Altamiranda."></a>
+          <figcaption>Tabacal, Salta, 1946: "doña Adelina Altamiranda, argentina, de profesión quehaceres, domiciliada en el Lote Lucrecia".</figcaption>
+        </figure>
+        <figure>
+          <a href="../actas/poman-1951-2.jpg" target="_blank" rel="noopener"><img src="../actas/poman-1951-2.jpg" width="1090" height="796" loading="lazy" alt="Acta de Pomán, 1951, donde se nombra a Adelina Altamiranda."></a>
+          <figcaption>Mutquín, 1951: "hijo del declarante y de doña Adelina Altamiranda, de nacionalidad argentina".</figcaption>
+        </figure>
+      </div>
+    </article>
+  </div>
+
+  <section class="note" aria-labelledby="falta">
+    <h3 id="falta">Lo que falta</h3>
+    <ul>
+      <li><strong>Su acta de defunción (1990).</strong> Sabemos el número por el sello, pero el libro no está digitalizado. Se puede pedir al Registro Civil de Catamarca: acta 686, folio 100, tomo 237, Capital, 1990.</li>
+      <li><strong>El casamiento religioso completo (1937)</strong>, en la parroquia de Saujil. Podría traer una dispensa por parentesco, porque su madre también era Chasampi.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Parte de <a href="../">Raíces Chasampi</a>, investigación familiar de Santiago Martín Sola.</p>
+  </footer>
+
+</main>
+</body>
+</html>
