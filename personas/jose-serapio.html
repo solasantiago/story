@@ -73,6 +73,11 @@ a:focus-visible { outline: 2px solid var(--ochre); outline-offset: 2px; border-r
 .trans { font-family: var(--display); font-size: 1.05rem; line-height: 1.65; background: var(--surface); border-radius: 6px; padding: 1rem 1.1rem; display: flex; flex-direction: column; gap: 0.7rem; }
 .trans .marg { font-family: var(--body); font-size: 0.92rem; color: var(--muted); }
 .aporta { font-size: 0.98rem; }
+.ruta { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; border-left: 2px solid var(--line); }
+.ruta li { position: relative; padding: 0 0 1rem 1.2rem; display: grid; grid-template-columns: 4.5rem 1fr; gap: 0.75rem; }
+.ruta li::before { content: ""; position: absolute; left: -6px; top: 0.45rem; width: 10px; height: 10px; background: var(--bg); border: 2px solid var(--ochre); transform: rotate(45deg); }
+.ruta .y { font-family: var(--label); font-weight: 700; color: var(--ochre); font-variant-numeric: tabular-nums; }
+.ruta li > span:last-child { min-width: 0; }
 .aporta strong { font-family: var(--label); letter-spacing: 0.05em; color: var(--ochre); }
 footer { color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--line); padding-top: 1rem; }
 </style>
@@ -98,7 +103,9 @@ footer { color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--lin
     <dt>Abuelos</dt>
     <dd>Pedro P. Chasampi y Antonia Aguilar, por parte de padre. Juan P. Calsapi y Segunda Carrizo, por parte de madre.<small>Los nombra su acta de nacimiento</small></dd>
     <dt>Oficio</dt>
-    <dd>Labrador, más tarde agricultor</dd>
+    <dd>Labrador en Mutquín, jornalero en los ingenios azucareros del norte, albañil y agricultor<small>Según las actas de 1937, 1938, 1946, 1951 y 1974</small></dd>
+    <dt>Dónde vivió</dt>
+    <dd>Mutquín, con años de trabajo en el Ingenio Ledesma (Jujuy, 1938) y en el Ingenio San Martín del Tabacal (Salta, 1946). En 1951 ya estaba de vuelta en Mutquín.</dd>
     <dt>Casamiento</dt>
     <dd>1 de febrero de 1937 en Saujil, por civil y por iglesia, con Adelina Altamiranda</dd>
     <dt>Hija</dt>
@@ -216,12 +223,92 @@ footer { color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--lin
 
   </div>
 
-  <section class="note" aria-labelledby="otros">
-    <h3 id="otros">Otros rastros, sin imagen todavía</h3>
-    <ul>
-      <li>En 1938 vivía con Adelina en el Ingenio Ledesma, en Jujuy, donde murió una hija recién nacida. Él tenía 27 años y ella 26. Hay otros registros de la familia en Salta (1946) y otra vez en Catamarca (1951).</li>
-    </ul>
+  <section class="section-head" id="norte">
+    <span class="label">1938 – 1951</span>
+    <h2>Los años en el norte</h2>
+    <p>Después de casarse, José Serapio y Adelina pasaron años yendo y viniendo entre Mutquín y los ingenios azucareros de Jujuy y Salta, donde él trabajaba como jornalero. Era el camino de muchas familias del oeste de Catamarca: en el acta de Salta, uno de los testigos es un Soloaga, otro apellido de Mutquín. Lo sabemos por tres actas en las que él aparece como declarante, todas de hijos que murieron muy chicos.</p>
   </section>
+
+  <ol class="ruta" aria-label="Recorrido de José Serapio">
+    <li><span class="y">1937</span><span>Se casa en Saujil en febrero. María Primitiva nace en Mutquín.</span></li>
+    <li><span class="y">1938</span><span>Vive en el Lote Cañitas del Ingenio Ledesma, en Jujuy. Es jornalero.</span></li>
+    <li><span class="y">c. 1943</span><span>Nace un hijo en el departamento Pomán: la familia había vuelto a Catamarca.</span></li>
+    <li><span class="y">1946</span><span>Vive en el Lote Lucrecia, en Tabacal, departamento de Orán, en Salta. Es jornalero y firma "José S. Chasampi".</span></li>
+    <li><span class="y">1951</span><span>Está otra vez en Mutquín y trabaja de albañil.</span></li>
+  </ol>
+
+  <div class="docs">
+
+    <article class="doc" id="jujuy-1938">
+      <span class="label">1938 · Registro Civil de Jujuy</span>
+      <h3>Ingenio Ledesma, Jujuy</h3>
+      <p class="ref">Registro Civil, distrito Ingenio Ledesma, departamento Ledesma. Defunciones, acta N.º 76.</p>
+      <div class="imgs">
+        <figure>
+          <a href="../actas/jujuy-1938-1.jpg" target="_blank" rel="noopener"><img src="../actas/jujuy-1938-1.jpg" width="992" height="796" loading="lazy" alt="Acta 76 de defunciones del Ingenio Ledesma, 1938, primera parte."></a>
+          <figcaption>Primera parte del acta.</figcaption>
+        </figure>
+        <figure>
+          <a href="../actas/jujuy-1938-2.jpg" target="_blank" rel="noopener"><img src="../actas/jujuy-1938-2.jpg" width="992" height="796" loading="lazy" alt="Segunda parte del acta, con los testigos y la firma Serapio Chasampi."></a>
+          <figcaption>Testigos y firmas.</figcaption>
+        </figure>
+      </div>
+      <div class="trans">
+        <p class="marg">Al margen: Sara del Carmen Chasampi.</p>
+        <p>Acta número setenta y seis. En Ingenio Ledesma, departamento de Ledesma, provincia de Jujuy, a los veintiocho días del mes de julio de mil novecientos treinta y ocho, por ante mí, Manuel Fernández, Jefe del Registro Civil, compareció don Serapio Chasampi, argentino, de veintisiete años, casado, jornalero, domiciliado en Lote Cañitas, y declaró: que el día veintisiete del mes en curso, a horas cuatro, falleció en su domicilio Sara del Carmen Chasampi, de bronconeumonía, según certificado médico del doctor Miguel Achetegui (?), que se archiva bajo el número de esta acta. Que la fallecida era del sexo femenino, argentina, de tres meses de edad, hija legítima del declarante y de su esposa doña Adelina Altamiranda, argentina, de veintiséis años, casada.</p>
+        <p>Leída la presente, la firman el declarante y los testigos don Teodoro Adolfo Rivas, argentino, de veinte años de edad, soltero, jornalero, y don Ramón Toribio Coronel, argentino, de veintiocho años, soltero, jornalero, domiciliados en Lote Cañitas, que han visto el cadáver, por ante mí, que doy fe.</p>
+        <p class="marg">Firmas: Serapio Chasampi, Teodoro A. Rivas, Ramón Coronel, y el Jefe del Registro Civil, con el sello del distrito Ingenio Ledesma.</p>
+      </div>
+      <p class="aporta"><strong>Qué aporta:</strong> dónde vivía y de qué trabajaba un año después de casarse. Las edades (27 y 26) coinciden con las de las actas de Catamarca. En FamilySearch la nena figura como "Lara" y nacida en "la de Cañitas": las dos cosas son errores del índice, porque el acta dice Sara y Cañitas es el lote donde vivían.</p>
+    </article>
+
+    <article class="doc" id="salta-1946">
+      <span class="label">1946 · Registro Civil de Salta</span>
+      <h3>Tabacal, Orán, Salta</h3>
+      <p class="ref">Registro Civil de Tabacal, departamento de Orán. Defunciones, folio 331, acta N.º 147 (?).</p>
+      <div class="imgs">
+        <figure>
+          <a href="../actas/salta-1946-1.jpg" target="_blank" rel="noopener"><img src="../actas/salta-1946-1.jpg" width="1058" height="796" loading="lazy" alt="Acta de defunción de Tabacal, 1946, primera parte."></a>
+          <figcaption>Primera parte del acta.</figcaption>
+        </figure>
+        <figure>
+          <a href="../actas/salta-1946-2.jpg" target="_blank" rel="noopener"><img src="../actas/salta-1946-2.jpg" width="1058" height="600" loading="lazy" alt="Segunda parte del acta, con los testigos y la firma José S. Chasampi."></a>
+          <figcaption>Testigos y firmas.</figcaption>
+        </figure>
+      </div>
+      <div class="trans">
+        <p>Acta número ciento cuarenta y siete (?). En Tabacal, departamento de Orán, provincia de Salta, el día cuatro de noviembre de mil novecientos cuarenta y seis, a las once y treinta horas, ante mí, Daniel (?), Encargado del Registro Civil, comparece don José S. Chasampi, de treinta y cuatro (?) años de edad, de estado casado, de nacionalidad argentino, de profesión jornalero, domiciliado en el Lote Lucrecia, y declara que a las 8 horas del día tres de noviembre, en su domicilio, ha fallecido Simeón Marcelo Chasampi, de nacionalidad argentino, nacido en el departamento Pomán, Catamarca, de tres años de edad, domiciliado en el Lote Lucrecia, a consecuencia de bronconeumonía, según consta en el certificado del doctor Roberto P. Maccio (?).</p>
+        <p>Que el finado era hijo legítimo de don José S. Chasampi, argentino, jornalero, domiciliado en el Lote Lucrecia, y de doña Adelina Altamiranda, argentina, de profesión quehaceres, domiciliada en el Lote Lucrecia.</p>
+        <p>Leída el acta, la firman conmigo el declarante y los testigos don Leandro Nieto, de veintitrés años de edad, argentino, soltero, jornalero, domiciliado en Lote Lucrecia, y don Joaquín Soloaga, de treinta y dos (?) años de edad, argentino, casado, jornalero, domiciliado en el Lote Lucrecia, quienes han visto el cadáver.</p>
+        <p class="marg">Firmas: José S. Chasampi, Joaquín Soloaga, Leandro Nieto, y el Encargado del Registro Civil, con el sello de Tabacal (Orán).</p>
+      </div>
+      <p class="aporta"><strong>Qué aporta:</strong> que en 1946 trabajaban en la zona del Ingenio San Martín del Tabacal, y que hacia 1943 habían estado de vuelta en Pomán, porque ahí nació el chico. Él firma como José S. Chasampi, igual que en 1937. Su edad está escrita a mano y no se lee bien: en noviembre de 1946 tenía 35.</p>
+    </article>
+
+    <article class="doc" id="poman-1951">
+      <span class="label">1951 · Registro Civil de Catamarca</span>
+      <h3>De vuelta en Mutquín</h3>
+      <p class="ref">Registro Civil de Pomán, defunciones, folio 181, acta N.º 9. Copia del acta labrada en el distrito de Mutquín.</p>
+      <div class="imgs">
+        <figure>
+          <a href="../actas/poman-1951-1.jpg" target="_blank" rel="noopener"><img src="../actas/poman-1951-1.jpg" width="1090" height="591" loading="lazy" alt="Acta 9 de defunciones de Pomán, 1951, encabezado."></a>
+          <figcaption>Encabezado del acta.</figcaption>
+        </figure>
+        <figure>
+          <a href="../actas/poman-1951-2.jpg" target="_blank" rel="noopener"><img src="../actas/poman-1951-2.jpg" width="1090" height="796" loading="lazy" alt="Continuación del acta, con el declarante José S. Chasampi, la madre Adelina Altamiranda y los testigos."></a>
+          <figcaption>Declarante, padres y testigos.</figcaption>
+        </figure>
+      </div>
+      <div class="trans">
+        <p class="marg">Al margen: Ramón Antonio Chasampi.</p>
+        <p>Acta número nueve. En Pomán, departamento de Pomán, provincia de Catamarca, el día treinta de julio de mil novecientos cincuenta y uno, ante mí, Hernán Delgadino (?), Juez de Paz encargado del Registro del Estado Civil, se ha recibido el acta del tenor siguiente:</p>
+        <p>"Acta de defunción. En este distrito de Mutquín, a días veintinueve de junio de mil novecientos cincuenta y uno, ante mí, José E. Nieva, Juez de Distrito, compareció don José S. Chasampi, de cuarenta años de edad, de nacionalidad argentino, de estado casado, de profesión albañil, domiciliado en Mutquín, y declaró que el día veintisiete del mes de junio del corriente año, a horas 19, falleció en Mutquín, sin asistencia médica, don Ramón Antonio Chasampi, de cinco meses y veintiséis días de edad, de nacionalidad argentino, domiciliado en Mutquín. Que el fallecido era hijo del declarante y de doña Adelina Altamiranda, de nacionalidad argentina.</p>
+        <p>Leída el acta, la firmaron conmigo el exponente y los testigos don Francisco Chumbita, de treinta y cuatro años de edad, de profesión albañil, argentino, soltero, domiciliado en Mutquín, y don Modesto Carrizo, de veintitrés años, de profesión agricultor, argentino, soltero, domiciliado en Mutquín. José S. Chasampi. Francisco Chumbita. Modesto Carrizo. José E. Nieva, Juez de Distrito."</p>
+      </div>
+      <p class="aporta"><strong>Qué aporta:</strong> en 1951 la familia ya vivía otra vez en Mutquín, y él había pasado de jornalero a albañil. Tenía 40 años, lo que coincide con su nacimiento en 1910.</p>
+    </article>
+
+  </div>
 
   <footer>
     <p>Parte de <a href="../">Raíces Chasampi</a>, investigación familiar de Santiago Martín Sola.</p>
