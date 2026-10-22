@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="La historia del linaje Chasampi de Mutquín, Catamarca: de la cultura La Aguada al cacique Juan Mateo Chasampi, y de ahí a María Primitiva y sus padres.">
+<meta name="description" content="Mutquín, Catamarca: la historia del pueblo desde la cultura La Aguada y la historia documentada de la familia de María Primitiva Chasampi.">
 <style>*,*::before,*::after{box-sizing:border-box}:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Raíces Chasampi</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -145,6 +145,16 @@ a:focus-visible { outline: 2px solid var(--ochre); outline-offset: 2px; border-r
 .actas-par { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
 @media (max-width: 420px) { .actas-par { grid-template-columns: 1fr; } }
 
+.toc { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+.toc a { background: var(--surface); border-radius: 6px; padding: 1rem; display: flex; flex-direction: column; gap: 0.3rem; text-decoration: none; color: var(--fg); min-width: 0; }
+.toc a strong { font-family: var(--display); font-size: 1.3rem; color: var(--accent); }
+.toc a span:last-child { color: var(--muted); font-size: 0.95rem; }
+@media (max-width: 420px) { .toc { grid-template-columns: 1fr; } }
+.part { display: flex; flex-direction: column; gap: 3rem; scroll-margin-top: 1rem; }
+.part-head { display: flex; flex-direction: column; gap: 0.6rem; }
+.part-head h2 { font-size: clamp(2rem, 8vw, 2.6rem); font-weight: 700; }
+.part-head p { color: var(--muted); max-width: 34rem; }
+
 .lineage { display: flex; flex-direction: column; gap: 0; }
 .gen { display: grid; grid-template-columns: 5.5rem 1fr; gap: 1rem; padding-block: 0.9rem; border-top: 1px solid var(--line); align-items: baseline; }
 .gen:last-child { border-bottom: 1px solid var(--line); }
@@ -174,31 +184,37 @@ footer { color: var(--muted); font-size: 0.9rem; display: flex; flex-direction: 
   <header class="hero">
     <span class="label">Mutquín · Pomán · Catamarca</span>
     <h1>Raíces <em>Chasampi</em></h1>
-    <p class="lede">La historia del pueblo y del linaje de María Primitiva Chasampi, nacida en Mutquín el 7 de febrero de 1937. Más de mil años en el oeste de Catamarca, desde la cultura La Aguada hasta hoy.</p>
+    <p class="lede">Dos historias que se cruzan en Mutquín. La del pueblo, con más de mil años en el oeste de Catamarca, y la de la familia de María Primitiva Chasampi, reconstruida acta por acta.</p>
   </header>
+
+  <nav class="toc" aria-label="Partes de la página">
+    <a href="#region"><span class="label">Parte uno</span><strong>Mutquín</strong><span>La historia del pueblo, de La Aguada a hoy.</span></a>
+    <a href="#familia"><span class="label">Parte dos</span><strong>La familia</strong><span>Lo que dicen las actas, desde 1888.</span></a>
+  </nav>
 
   <div class="greca" aria-hidden="true"></div>
 
-  <section class="pair" aria-label="Dos palabras para empezar">
-    <div>
-      <span class="label">El dónde</span>
-      <strong>Mutquín</strong>
-      <p>El pueblo del departamento Pomán, en Catamarca, donde nació María Primitiva. Su nombre viene del quichua <em>mutquy</em>, que significa "olor".</p>
+  <section class="part" id="region" aria-labelledby="t-region">
+    <div class="part-head">
+      <span class="label">Parte uno · La historia regional</span>
+      <h2 id="t-region">Mutquín, de La Aguada a hoy</h2>
+      <p>El pueblo donde nació la familia. Esta parte cuenta la historia de Mutquín y de su gente, no la de una familia en particular.</p>
     </div>
-    <div>
-      <span class="label">El quiénes</span>
-      <strong>Chasampi</strong>
-      <p>El apellido y el linaje. Tiene raíz en el cacán, la lengua diaguita, y sus portadores se reconocen descendientes de un cacique.</p>
-    </div>
-  </section>
 
-  <section class="section-head">
-    <span class="label">Línea de tiempo</span>
-    <h2>De La Aguada a Mutquín</h2>
-  </section>
+    <section class="pair" aria-label="Dos palabras para empezar">
+      <div>
+        <span class="label">El dónde</span>
+        <strong>Mutquín</strong>
+        <p>Un pueblo del departamento Pomán, en Catamarca. Su nombre viene del quichua <em>mutquy</em>, que significa "olor".</p>
+      </div>
+      <div>
+        <span class="label">El apellido</span>
+        <strong>Chasampi</strong>
+        <p>Un apellido de Mutquín con raíz en el cacán, la lengua diaguita. Lo llevó un cacique de la época colonial, Juan Mateo Chasampi.</p>
+      </div>
+    </section>
 
-  <ol class="timeline">
-
+    <ol class="timeline">
     <li class="era">
       <span class="label">c. 600 – 900 d.C.</span>
       <h3>La cultura La Aguada</h3>
@@ -206,11 +222,6 @@ footer { color: var(--muted); font-size: 0.9rem; display: flex; flex-direction: 
       <p>El nombre se lo pusieron los arqueólogos, por una pequeña localidad catamarqueña llamada La Aguada, donde se halló un cementerio de unas 200 tumbas con su cerámica característica.</p>
       <ul>
         <li>Hicieron una de las cerámicas más refinadas de la región: grabada y pintada en gris, negro y rojo.</li>
-        <li>Su símbolo central era el <strong>felino</strong>, el jaguar, asociado al poder y a lo sagrado, muchas veces junto a figuras de guerreros.</li>
-        <li>Trabajaron el cobre en placas con grabados rituales. Por sus figuras casi de dragón, a esta cultura también se la llama "Draconiana".</li>
-      </ul>
-      <p>Antes hubo cazadores y recolectores durante miles de años, pero sin un rastro continuo que se pueda seguir hasta hoy.</p>
-    </li>
 
     <li class="era">
       <span class="label">c. 850 – 1480 d.C.</span>
@@ -218,14 +229,6 @@ footer { color: var(--muted); font-size: 0.9rem; display: flex; flex-direction: 
       <p>Hacia el año 900 La Aguada se diluye, pero parte de su legado continúa en culturas más tardías. La principal es la santamariana, llamada así por el valle de Santa María, entre Catamarca y Salta.</p>
       <ul>
         <li>Su sello más conocido son las <strong>urnas funerarias</strong> donde enterraban a los niños, hoy presentes en grandes museos del mundo.</li>
-        <li>Es el período de los Desarrollos Regionales: pueblos fortificados en altura, obras de riego y comunidades que empiezan a confederarse para defenderse.</li>
-      </ul>
-      <div class="note">
-        <h4>Santa María y diaguita, ¿qué relación hay?</h4>
-        <p>Son la misma gente vista de dos maneras. "Santa María" es el nombre arqueológico: el estilo de los objetos, las urnas, las ruinas. "Diaguita" es el nombre del pueblo vivo que dejó esos restos.</p>
-        <p>Pensalo así: si dentro de dos mil años unos arqueólogos encontraran mates y camisetas de fútbol y llamaran a eso "cultura rioplatense", esa gente igual se habría llamado a sí misma argentina y habría hablado español. La gente de la cultura santamariana <strong>era</strong> el pueblo diaguita.</p>
-      </div>
-    </li>
 
     <li class="era">
       <span class="label">Nación diaguita</span>
@@ -261,20 +264,35 @@ footer { color: var(--muted); font-size: 0.9rem; display: flex; flex-direction: 
       <p>El encomendero Cuba Palacio se había llevado tierras y familias de la comunidad a Colpes. Juan Mateo Chasampi fue responsable, junto con otros, de recuperarlas. Convirtió un cargo pensado para someter en una herramienta de resistencia, y por eso el pueblo de Mutquín le rinde homenaje.</p>
       <div class="note">
         <h4>Hasta dónde llega la memoria escrita</h4>
-        <p>De él hacia atrás no hay registros accesibles. Los pueblos originarios no escribían, y un cacique aparece en los papeles coloniales solo cuando los españoles tuvieron motivo para nombrarlo. Juan Mateo Chasampi es el antepasado más antiguo de esta rama que se conoce con nombre y apellido. Antes de él hay pueblo y cultura, pero ya no personas con nombre.</p>
+        <p>De él hacia atrás no hay registros accesibles. Los pueblos originarios no escribían, y un cacique aparece en los papeles coloniales solo cuando los españoles tuvieron motivo para nombrarlo. Juan Mateo Chasampi es la persona más antigua con este apellido que se conoce con nombre. Antes de él hay pueblo y cultura, pero ya no personas con nombre.</p>
       </div>
     </li>
 
+    <li class="era">
+      <span class="label">Hoy</span>
+      <h3>Una identidad que sigue viva</h3>
+      <p>Los descendientes de Mutquín rechazan que a su comunidad se la llame "pueblo de indios" y reivindican más de 1.400 años de antigüedad, según la cerámica de La Aguada hallada en la zona.</p>
+      <p>En los carnavales de Mutquín todavía salen las comparsas <strong>Diaguita</strong> y <strong>Calchaquí</strong>, con sus coplas, sus trajes y sus hombres-pájaro.</p>
+    </li>
+    </ol>
+  </section>
+
+  <div class="greca" aria-hidden="true"></div>
+
+  <section class="part" id="familia" aria-labelledby="t-familia">
+    <div class="part-head">
+      <span class="label">Parte dos · La historia familiar</span>
+      <h2 id="t-familia">La familia de María Primitiva</h2>
+      <p>Solo lo que está respaldado por un acta o por el testimonio de la familia. Cada dato tiene su fuente al pie de la página.</p>
+    </div>
+
+    <ol class="timeline">
     <li class="era">
       <span class="label">c. 1888 – 1897</span>
       <h3>Las dos parejas de Mutquín</h3>
       <p>Hacia fines del siglo XIX nacen en Mutquín los cuatro bisabuelos de María Primitiva. Sus años salen de las edades que declararon en 1937, así que son aproximados.</p>
       <ul>
         <li><strong>Eleuterio Chasampi</strong> y <strong>Dalinda Calsapi</strong>, ella nacida hacia 1888. Eleuterio murió antes de 1937.</li>
-        <li><strong>Agustín Altamiranda</strong>, nacido hacia 1889 y labrador, y <strong>Ramona Chasampi</strong>, nacida hacia 1897.</li>
-      </ul>
-      <p>Las dos parejas estaban casadas por la Iglesia: los libros de Saujil anotan a sus hijos como "legítimos".</p>
-    </li>
 
     <li class="era">
       <span class="label">1910 – 1913</span>
@@ -325,58 +343,52 @@ footer { color: var(--muted); font-size: 0.9rem; display: flex; flex-direction: 
       <span class="label">7 de febrero de 1937</span>
       <h3>Nace María Primitiva Chasampi</h3>
       <p>Seis días después del casamiento de sus padres, Juan Serapio y Adelina, nace en Mutquín. Después vendrían sus hermanas Norma e Isabel.</p>
-      <p>Descendiente del cacique Chasampi, con ella esta historia de más de mil años llega a la familia Sola.</p>
+      <p>Con ella, la rama Chasampi de Mutquín llega a la familia Sola.</p>
     </li>
+    </ol>
 
-    <li class="era">
-      <span class="label">Hoy</span>
-      <h3>Una identidad que sigue viva</h3>
-      <p>Los descendientes de Mutquín rechazan que a su comunidad se la llame "pueblo de indios" y reivindican más de 1.400 años de antigüedad, según la cerámica de La Aguada hallada en la zona.</p>
-      <p>En los carnavales de Mutquín todavía salen las comparsas <strong>Diaguita</strong> y <strong>Calchaquí</strong>, con sus coplas, sus trajes y sus hombres-pájaro.</p>
-    </li>
+    <section class="lineage" aria-labelledby="linaje">
+      <div class="section-head" style="margin-bottom:1.25rem">
+        <span class="label">Generación por generación</span>
+        <h3 id="linaje" style="font-family:var(--display);font-size:1.6rem">De Mutquín a hoy</h3>
+      </div>
+      <div class="gen gap">
+        <span class="yr">antes de 1888</span>
+        <div class="who"><strong>Generaciones por investigar</strong><span>Los casamientos de las dos parejas de abajo son el próximo paso hacia atrás</span></div>
+      </div>
+      <div class="gen">
+        <span class="yr">c. 1888</span>
+        <div class="who"><strong>Eleuterio Chasampi y Dalinda Calsapi</strong><span>Padres de Juan Serapio</span></div>
+      </div>
+      <div class="gen">
+        <span class="yr">c. 1889</span>
+        <div class="who"><strong>Agustín Altamiranda y Ramona Chasampi</strong><span>Padres de Adelina</span></div>
+      </div>
+      <div class="gen">
+        <span class="yr">1910 · 1912</span>
+        <div class="who"><strong>Juan Serapio Chasampi y Adelina Altamiranda</strong><span>Casados el 1 de febrero de 1937 en Saujil</span></div>
+      </div>
+      <div class="gen">
+        <span class="yr">1937</span>
+        <div class="who"><strong>María Primitiva Chasampi</strong><span>Nacida en Mutquín</span></div>
+      </div>
+      <div class="gen">
+        <span class="yr">1975</span>
+        <div class="who"><strong>Cristian Martín Sola</strong><span>Hijo de María Primitiva y de José Sola</span></div>
+      </div>
+      <div class="gen">
+        <span class="yr">1996 · 2004</span>
+        <div class="who"><strong>Santiago Martín y Chiara Sofía Sola</strong><span>Sus nietos</span></div>
+      </div>
+    </section>
 
-  </ol>
-
-  <div class="greca" aria-hidden="true"></div>
-
-  <section class="lineage" aria-labelledby="linaje">
-    <div class="section-head" style="margin-bottom:1.25rem">
-      <span class="label">La familia</span>
-      <h2 id="linaje">Del cacique a hoy</h2>
-    </div>
-    <div class="gen">
-      <span class="yr">s. XVII–XVIII</span>
-      <div class="who"><strong>Juan Mateo Chasampi</strong><span>Cacique de Mutquín</span></div>
-    </div>
-    <div class="gen gap">
-      <span class="yr">· · ·</span>
-      <div class="who"><strong>Generaciones por descubrir</strong><span>El camino que une al cacique con Eleuterio Chasampi</span></div>
-    </div>
-    <div class="gen">
-      <span class="yr">c. 1888</span>
-      <div class="who"><strong>Eleuterio Chasampi y Dalinda Calsapi</strong><span>Padres de Juan Serapio</span></div>
-    </div>
-    <div class="gen">
-      <span class="yr">c. 1889</span>
-      <div class="who"><strong>Agustín Altamiranda y Ramona Chasampi</strong><span>Padres de Adelina</span></div>
-    </div>
-    <div class="gen">
-      <span class="yr">1910 · 1912</span>
-      <div class="who"><strong>Juan Serapio Chasampi y Adelina Altamiranda</strong><span>Casados el 1 de febrero de 1937 en Saujil</span></div>
-    </div>
-    <div class="gen">
-      <span class="yr">1937</span>
-      <div class="who"><strong>María Primitiva Chasampi</strong><span>Nacida en Mutquín</span></div>
-    </div>
-    <div class="gen">
-      <span class="yr">1975</span>
-      <div class="who"><strong>Cristian Martín Sola</strong><span>Hijo de María Primitiva y de José Sola</span></div>
-    </div>
-    <div class="gen">
-      <span class="yr">1996 · 2004</span>
-      <div class="who"><strong>Santiago Martín y Chiara Sofía Sola</strong><span>Sus nietos</span></div>
+    <div class="note">
+      <h4>¿Y el cacique?</h4>
+      <p>En Mutquín hay muchas familias Chasampi. Que la nuestra descienda de Juan Mateo Chasampi es una posibilidad, no un dato. Para afirmarlo habría que unir, con documentos, cada generación desde el siglo XVIII hasta Eleuterio y Ramona. Hasta entonces, el cacique es parte de la historia del pueblo y no de este árbol.</p>
     </div>
   </section>
+
+  <div class="greca" aria-hidden="true"></div>
 
   <section class="sources" aria-labelledby="fuentes">
     <div class="section-head" style="margin-bottom:1rem">
@@ -385,7 +397,7 @@ footer { color: var(--muted); font-size: 0.9rem; display: flex; flex-direction: 
     </div>
     <div class="groups">
       <div class="group">
-        <h3>Documentos de la familia</h3>
+        <h3>La familia: actas y testimonios</h3>
         <ol>
           <li><span>Bautismo de Juan Serapio Chasampi.</span> Parroquia de Saujil, libro de bautismos, página 360, partida 719, 1911. Imagen en FamilySearch.</li>
           <li><span>Bautismo de Ramona Adelina Altamiranda.</span> Parroquia de Saujil, página 69, partida 128, 1913. Imagen en FamilySearch.</li>
@@ -394,7 +406,7 @@ footer { color: var(--muted); font-size: 0.9rem; display: flex; flex-direction: 
         </ol>
       </div>
       <div class="group">
-        <h3>Historia y contexto</h3>
+        <h3>La región: historia y contexto</h3>
         <ol>
           <li><span>Gabriela de la Orden de Peracca, <em>Pueblos indios de Pomán. Catamarca (siglos XVII a XIX)</em>.</span> Buenos Aires, Dunken, 2006. Colpes, Mutquín y el cacique Chasampi.</li>
           <li><span><a href="https://es.wikipedia.org/wiki/Cultura_de_la_Aguada" target="_blank" rel="noopener">Cultura de la Aguada</a>, Wikipedia.</span> Fechas, ubicación y origen del nombre.</li>
